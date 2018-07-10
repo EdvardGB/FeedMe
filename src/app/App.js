@@ -5,12 +5,21 @@ import { connect } from "react-redux";
 import Recipies from './containers/recipies';
 import NotFound from './containers/notFound';
 
+
+import * as recipeActions from './actions/recipeAction';
+import * as APIService from './services/apiService';
+
 class App extends Component {
 
     constructor(props) {
         super(props); 
     }
 
+    componentDidMount(){
+        APIService.getAPI('products/9329').then(response => 
+            response.json().then(data => console.log(data))
+        )
+    }
     
     render () {
         return (
@@ -36,6 +45,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
+        addRecipe : (arg) => {recipeActions.add(dispatch, arg)}
     };
 }
 

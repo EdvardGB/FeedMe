@@ -11,6 +11,7 @@
   "author": "Edvard Gjessing Bakken",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^1.3.1",
     "babel": "^6.23.0",
     "immutable": "^3.8.2",
     "react": "^16.4.1",
