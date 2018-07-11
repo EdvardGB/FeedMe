@@ -5,7 +5,7 @@ export const actions = {
 function addAction(arg){
     return {
         type: actions.add,
-        data: arg
+        recipe: arg
     }
 }
 

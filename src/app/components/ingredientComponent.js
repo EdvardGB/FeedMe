@@ -9,7 +9,7 @@ export default class IngredientComponent extends React.PureComponent {
     render() {
 		return (
 			<div>
-				Ingredient : {this.props.ingredient.name}
+				{this.props.ingredient.name}
 				<button onClick={this.remove.bind(this)}>X</button>
 			</div>
 		);

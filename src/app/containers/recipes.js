@@ -5,6 +5,12 @@ import PropTypes from 'prop-types';
 import Search from '../components/searchComponent';
 import RecipeComponent from '../components/recipeComponent';
 
+import Recipe from '../interfaces/recipe'; 
+
+import * as recipeActions from '../actions/recipeAction';
+
+import sampleData from '../../../sampleData';
+
 class Recipes extends Component {
 
     constructor(props) {
@@ -14,6 +20,11 @@ class Recipes extends Component {
         }
     }
 
+    componentDidMount(){
+        sampleData.recipes.map(recipe => this.props.addRecipe(
+            new Recipe(recipe)))
+    }
+
     searchOnChange(value){
         this.setState({value: value})
     }
@@ -21,25 +32,31 @@ class Recipes extends Component {
     render () {
         return (
             <div>
-               <div><Search value={this.state.value} onChange={this.searchOnChange.bind(this)}/></div>
-               <div>Display 5 recipies</div>
+                <div><Search value={this.state.value} onChange={this.searchOnChange.bind(this)}/></div>
+                {this.props.recipes.map(recipe => 
+                    <RecipeComponent 
+                        key={recipe.id} 
+                        recipe={recipe}
+                        classes={{card: 'card', media: 'media'}}
+                />)}
             </div>
         )
     }
 }
 
 Recipes.propTypes  = {
-    recipies: PropTypes.object,
+    recipes: PropTypes.object,
 }
 
 function mapStateToProps(state) {
     return {
-      recipies: state.get('recipies')
+      recipes: state.get('recipes')
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
+        addRecipe: (arg) => {recipeActions.add(dispatch, arg)}
     };
 }
 

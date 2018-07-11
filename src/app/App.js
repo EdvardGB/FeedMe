@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Route, Switch } from 'react-router-dom'
 import { connect } from "react-redux";
 
-import Recipies from './containers/recipies';
+import Recipes from './containers/recipes';
 import NotFound from './containers/notFound';
 
 
@@ -14,19 +14,21 @@ class App extends Component {
     constructor(props) {
         super(props); 
     }
-
-    componentDidMount(){
-        APIService.getAPI('products/9329').then(response => 
-            response.json().then(data => console.log(data))
+    
+    testClick(){
+        APIService.getAPI('recipes/2580/').then(response => 
+            response.json().then(data => console.log(JSON.stringify(data,null,4)))
         )
     }
+    
     
     render () {
         return (
             <div>
+                <button onClick={this.testClick.bind(this)}>hei</button>
                <div className="App">
                     <Switch>    
-                        <Route path="/" component={Recipies} />
+                        <Route path="/" component={Recipes} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>

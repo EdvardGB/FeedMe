@@ -14,6 +14,17 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      }, {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }, {
+        test: /\.less$/,
+        loaders: ["style-loader", "css-loader", "less-loader"]
+      }, 
+      {
+        test: /\.(png|jpg)$/, 
+        loader: 'url-loader?limit=8192' 
       }
     ]
   },

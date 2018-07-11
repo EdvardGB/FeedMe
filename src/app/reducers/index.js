@@ -5,6 +5,6 @@ import { recipeReducer } from './recipeReducer';
 export default function createReducer() {
   return combineReducers({
     main: mainReducer,
-    recipies: recipeReducer
+    recipes: recipeReducer
   });
 }

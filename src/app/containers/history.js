@@ -14,7 +14,7 @@ class Recipes extends Component {
         return (
             <div>
                <div>Search</div>
-               <div>Display 5 recipies</div>
+               <div>Display 5 recipes</div>
             </div>
         )
     }

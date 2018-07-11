@@ -6,6 +6,7 @@ const initialState = fromJS([]);
 
 function add(oldState, action){
     let state = oldState
+    state = state.push(action.recipe)
     return state
 }
 

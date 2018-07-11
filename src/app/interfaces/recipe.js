@@ -1,4 +1,4 @@
-import Ingredient from './Ingredient'
+import Ingredient from './ingredient'
 
 export default class Recipe {
     constructor(data){
@@ -6,10 +6,9 @@ export default class Recipe {
         this.difficulty = data['difficulty_string'];
         this.id = data.id
         this.title = data.title
-        this.ingredients = []
+        this.ingredients = data.ingredients.map(ingredient => new Ingredient(ingredient.product))  
+        this.image = data['feature_image_url']
     }
 
-    add(ingredient){
-        this.ingredients.append(ingredient)
-    }
+  
 }
