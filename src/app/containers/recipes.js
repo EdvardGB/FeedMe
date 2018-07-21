@@ -30,6 +30,7 @@ class Recipes extends PureComponent  {
     render () {
         return (
             <div>
+                <h1>Recipes</h1>
                 <NavLink to='/shoplist'>Shoplist</NavLink>
                 <NavLink to='/fridge'>Fridge</NavLink>
                 <div><Search value={this.state.value} onChange={this.searchOnChange.bind(this)}/></div>
@@ -40,6 +41,7 @@ class Recipes extends PureComponent  {
                         classes={{card: 'card', media: 'media'}}
                         addIngredient = {this.props.addIngToShopList}
                         removeIngredient = {this.props.removeIngToShopList}
+                        fridge = {this.props.fridge}
                 />)}
             </div>
         )
@@ -48,11 +50,13 @@ class Recipes extends PureComponent  {
 
 Recipes.propTypes  = {
     recipes: PropTypes.object,
+    fridge: PropTypes.object
 }
 
 function mapStateToProps(state) {
     return {
-      recipes: state.get('recipes')
+      recipes: state.get('recipes'),
+      fridge: state.get('fridge')
     };
 }
 

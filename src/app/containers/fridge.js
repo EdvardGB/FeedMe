@@ -12,6 +12,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 
 import IngredientComponent from '../components/fridge/fridgeIngredientComponent';
 
+import * as fridgeActions from '../actions/fridgeActions';
 
 class Fridge extends Component {
 
@@ -21,16 +22,6 @@ class Fridge extends Component {
 
     renderIngredients(){
         return this.props.ingredients.size > 0 ? <TableBody>
-                <TableRow className="IngredientRecipeListComponent">
-                    <TableCell component="th" scope="row">
-                        
-                    </TableCell>
-                    <TableCell>
-                        <Checkbox  
-                            onChange={()=> console.log("remove")}
-                        />
-                    </TableCell>
-                </TableRow>
                 {this.props.ingredients.map(ingredient => 
                     <IngredientComponent 
                         key={ingredient.id} 
@@ -45,6 +36,7 @@ class Fridge extends Component {
     render () {
         return (
             <div>
+                <h1>Fridge</h1>
                 <NavLink to='/shoplist'>Shoplist</NavLink>
                 <NavLink to='/'>Recipes</NavLink>
                 <Table>

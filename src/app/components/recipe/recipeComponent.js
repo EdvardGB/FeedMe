@@ -34,6 +34,18 @@ export default class RecipeComponent extends React.PureComponent {
         };
     }
 
+    getRelativeIngredients(){
+        let numbIng = this.props.recipe.ingredients.length
+        let numbFridge = 0
+        this.props.recipe.ingredients.forEach(recipeIng =>{
+            this.props.fridge.forEach(fridgeIng => {
+                if(fridgeIng === recipeIng){
+                    numbFridge+=1
+                }
+            })
+        })
+        return numbFridge + "/" + numbIng
+    }
 
 	onChange(event, checked){
         if(checked){
@@ -62,7 +74,7 @@ export default class RecipeComponent extends React.PureComponent {
         } = this.props;
 		return (
             <div>
-                <Card className="card">
+                <Card className="recipe">
                     <CardMedia
                             className="recipe-media"
                             image={recipe.image}
@@ -78,6 +90,8 @@ export default class RecipeComponent extends React.PureComponent {
                         </IconButton>
                         }
                         title={recipe.title}
+                        subheader={this.getRelativeIngredients()}
+
                     />
                     
                     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>

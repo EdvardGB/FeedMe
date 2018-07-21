@@ -49,6 +49,11 @@ export default class IngredientComponent extends React.PureComponent {
                     checked={this.state.checked}
                     onChange={this.onChange.bind(this)}/>
             </TableCell>
+            <TableCell>
+                <Typography>
+                    {this.props.ingredient.inFridge ? "in fridge" : null}
+                </Typography>
+            </TableCell>
         </TableRow>;
     }
 }

@@ -2,21 +2,19 @@ import { fromJS } from 'immutable';
 
 import * as fridgeActions from '../actions/fridgeActions'; 
 
-import IngredientComponent from '../components/shoplist/shoplistIngredientComponent';
-
 
 const initialState = fromJS([]);
 
 function add(oldState, action){
     let state = oldState
-    action.ingredient.inShoppingList = true
+    action.ingredient.inFridge = true
     state = state.push(action.ingredient)
     return state
 }
 
 function remove(oldState, action){
     let state = oldState
-    action.ingredient.inShoppingList = false
+    action.ingredient.inFridge = false
     state = state.splice(state.indexOf(action.ingredient), 1)
     return state
 }

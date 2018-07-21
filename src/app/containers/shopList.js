@@ -25,9 +25,10 @@ class ShopList extends PureComponent {
     onChange(event, checked){
         if(checked){
             this.props.ingredients.forEach(ingredient => {
-                ingredient.inShoppingList ?
+                if(ingredient.inShoppingList){
                     this.props.removeIngShopList(ingredient)
-                :   null;
+                    this.props.addIngToFridge(ingredient)
+                }
             })
         }
     }
@@ -59,13 +60,14 @@ class ShopList extends PureComponent {
     render () {
         return (
             <div>
+                <h1>Shoppinglist</h1>
                 <NavLink to='/'>Recipes</NavLink>
                 <NavLink to='/fridge'>Fridge</NavLink>
                 <Table>
                     <TableHead>
                         <TableRow>
                             <TableCell>Ingredients</TableCell>
-                            <TableCell>Add to shoppinglist</TableCell>
+                            <TableCell>Add to fridge</TableCell>
                         </TableRow>
                     </TableHead>
                     {this.renderIngredients()}

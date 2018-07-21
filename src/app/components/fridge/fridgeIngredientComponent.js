@@ -16,6 +16,11 @@ export default class IngredientComponent extends React.PureComponent {
         }
     }
 
+    onChange(event, checked){
+        if(checked){
+            this.props.remove(this.props.ingredient)
+        }
+    }
 
     render(){ 
         const {
@@ -25,6 +30,12 @@ export default class IngredientComponent extends React.PureComponent {
             <TableCell component="th" scope="row">
                 {name}
             </TableCell>
+            <TableCell>
+                <Checkbox 
+                    onChange={this.onChange.bind(this)}
+                />
+            </TableCell>
+
         </TableRow>;
     }
 }
