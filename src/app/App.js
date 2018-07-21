@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 
 import Recipes from './containers/recipes';
 import ShopList from './containers/shopList';
+import Fridge from './containers/fridge';
 import NotFound from './containers/notFound';
 
 import Recipe from './interfaces/recipe'; 
@@ -38,6 +39,7 @@ class App extends PureComponent  {
                     <Switch>    
                         <Route exact path="/" component={Recipes} />
                         <Route path="/shoplist" component={ShopList} />
+                        <Route path="/fridge" component={Fridge} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>

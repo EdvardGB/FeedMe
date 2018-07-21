@@ -30,7 +30,8 @@ class Recipes extends PureComponent  {
     render () {
         return (
             <div>
-                <NavLink to='/shoplist'>shoplist</NavLink>
+                <NavLink to='/shoplist'>Shoplist</NavLink>
+                <NavLink to='/fridge'>Fridge</NavLink>
                 <div><Search value={this.state.value} onChange={this.searchOnChange.bind(this)}/></div>
                 {this.props.recipes.map(recipe => 
                     <RecipeComponent 
