@@ -1,285 +1,285 @@
 
 {
-"ingredients": [
-    {
-        "id": 9329,
-        "full_name": "Banan Colombia, 1 stk",
-        "brand": null,
-        "brand_id": null,
-        "name": "Banan",
-        "name_extra": "Colombia, 1 stk",
-        "front_url": "https://kolonial.no/produkter/9329-banan-1-stk-colombia/",
-        "images": [
-            {
-                "thumbnail": {
-                    "url": "https://kolonial.no/media/uploads/public/0/218/12218-8919f-product_detail.jpg"
-                },
-                "large": {
-                    "url": "https://kolonial.no/media/uploads/public/0/218/12218-8919f-product_large.jpg"
-                }
-            }
-        ],
-        "gross_price": "6.50",
-        "gross_unit_price": "26.00",
-        "unit_price_quantity_abbreviation": "kg",
-        "unit_price_quantity_name": "Kilogram",
-        "discount": null,
-        "promotion": null,
-        "availability": {
-            "is_available": true,
-            "code": "available",
-            "description": "",
-            "description_short": ""
-        },
-        "category_items": [
-            {
-                "id": 9174,
-                "product_category_id": 21,
-                "ordering": 70
-            }
-        ],
-        "client_classifiers": [],
-        "categories": [
-            {
-                "id": 21,
-                "name": "Frukt",
-                "parent": 20,
-                "ordering": 1010,
-                "description": "",
-                "is_new": false,
-                "children": [],
-                "campaign_banners": []
-            }
-        ],
-        "contents_html": "<div class=\"contents\">\n\n<h3>\nUtleveringsdager\n</h3>\n\n<p>\nAlle dager\n</p>\n\n<h3>\nStørrelse\n</h3>\n\n<p>\n250 gram\n</p>\n\n<h3>\nOppbevaring\n</h3>\n\n<p>\n12 - 14 °C\n</p>\n\n<p class=\"disclaimer\">\n\nLeverandøren\n\nhar levert informasjonen ovenfor.\n\n</p>\n\n</div>\n",
-        "nutrition_html": "<table class=\"nutrition\"> <caption>Næringsinnhold pr. 100g/ml </caption><tbody> <tr><th> Energi</th> <td>352 kJ / 83 kcal </td></tr> <tr><th> Fett</th> <td>0,30 g </td></tr> <tr class=\"muted\"> <td>&mdash; mettede fettsyrer </td><td> 0,10 g </td></tr> <tr class=\"muted\"> <td>&mdash; flerumettede fettsyrer </td><td> 0,10 g </td></tr> <tr><th> Karbohydrater</th> <td>18,10 g </td></tr> <tr class=\"muted\"> <td>&mdash; sukkerarter </td><td> 13,90 g </td></tr> <tr class=\"muted\"> <td>&mdash; stivelse </td><td> 4,40 g </td></tr> <tr><th> Kostfiber</th> <td>1,70 g </td></tr> <tr><th> Protein</th> <td>1,10 g </td></tr> </tbody></table>\n",
-        "alternative_products": [
-            {
-                "id": 19432,
-                "full_name": "Økologiske Bananer 4-6 stk, Colombia, 600 g",
-                "brand": null,
-                "brand_id": null,
-                "name": "Økologiske Bananer",
-                "name_extra": "4-6 stk, Colombia, 600 g",
-                "front_url": "https://kolonial.no/produkter/19432-okologiske-bananer-5-6-stk-colombia/",
-                "images": [
-                    {
-                        "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/0/356/3556-998b7-product_detail.jpg"
-                        },
-                        "large": {
-                            "url": "https://kolonial.no/media/uploads/public/0/356/3556-998b7-product_large.jpg"
-                        }
-                    }
-                ],
-                "gross_price": "23.00",
-                "gross_unit_price": "38.33",
-                "unit_price_quantity_abbreviation": "kg",
-                "unit_price_quantity_name": "Kilogram",
-                "discount": null,
-                "promotion": null,
-                "availability": {
-                    "is_available": true,
-                    "code": "available",
-                    "description": "",
-                    "description_short": ""
-                },
-                "category_items": [
-                    {
-                        "id": 19033,
-                        "product_category_id": 21,
-                        "ordering": 80
-                    }
-                ],
-                "client_classifiers": [
-                    {
-                        "name": "Økologisk",
-                        "image_url": "https://kolonial.no/static/products/img/okologisk20x20@3x.ce61374c5376.png",
-                        "is_important": false
+    "ingredients": [
+        {
+            "id": 9329,
+            "full_name": "Banan Colombia, 1 stk",
+            "brand": null,
+            "brand_id": null,
+            "name": "Banan",
+            "name_extra": "Colombia, 1 stk",
+            "front_url": "https://kolonial.no/produkter/9329-banan-1-stk-colombia/",
+            "images": [
+                {
+                    "thumbnail": {
+                        "url": "https://kolonial.no/media/uploads/public/0/218/12218-8919f-product_detail.jpg"
                     },
-                    {
-                        "name": "Fairtrade",
-                        "image_url": "https://kolonial.no/static/products/img/fairtrade58x60.4426b27b7c82.png",
-                        "is_important": false
+                    "large": {
+                        "url": "https://kolonial.no/media/uploads/public/0/218/12218-8919f-product_large.jpg"
                     }
-                ]
-            },
-            {
-                "id": 24854,
-                "full_name": "Banan i Pose liten størrelse, ca. 1 kg",
-                "brand": null,
-                "brand_id": null,
-                "name": "Banan i Pose",
-                "name_extra": "liten størrelse, ca. 1 kg",
-                "front_url": "https://kolonial.no/produkter/24854-banan-i-pose/",
-                "images": null,
-                "gross_price": "14.90",
-                "gross_unit_price": "14.90",
-                "unit_price_quantity_abbreviation": "kg",
-                "unit_price_quantity_name": "Kilogram",
-                "discount": null,
-                "promotion": null,
-                "availability": {
-                    "is_available": true,
-                    "code": "available",
-                    "description": "",
-                    "description_short": ""
-                },
-                "category_items": [
-                    {
-                        "id": 25611,
-                        "product_category_id": 21,
-                        "ordering": 610
-                    }
-                ],
-                "client_classifiers": []
-            }
-        ],
-        "discount_mix_and_match_products": null
-    },
-    {
-        "id": 9326,
-        "full_name": "Appelsin Spansk, 1 stk",
-        "brand": null,
-        "brand_id": null,
-        "name": "Appelsin",
-        "name_extra": "Spansk, 1 stk",
-        "front_url": "https://kolonial.no/produkter/9326-appelsin-spansk/",
-        "images": [
-            {
-                "thumbnail": {
-                    "url": "https://kolonial.no/media/uploads/public/359/362/699162-ac329-product_detail.jpg"
-                },
-                "large": {
-                    "url": "https://kolonial.no/media/uploads/public/359/362/699162-ac329-product_large.jpg"
                 }
-            }
-        ],
-        "gross_price": "6.90",
-        "gross_unit_price": "21.56",
-        "unit_price_quantity_abbreviation": "kg",
-        "unit_price_quantity_name": "Kilogram",
-        "discount": null,
-        "promotion": null,
-        "availability": {
-            "is_available": true,
-            "code": "available",
-            "description": "",
-            "description_short": ""
-        },
-        "category_items": [
-            {
-                "id": 9171,
-                "product_category_id": 21,
-                "ordering": 330
-            }
-        ],
-        "client_classifiers": [],
-        "categories": [
-            {
-                "id": 21,
-                "name": "Frukt",
-                "parent": 20,
-                "ordering": 1010,
+            ],
+            "gross_price": "6.50",
+            "gross_unit_price": "26.00",
+            "unit_price_quantity_abbreviation": "kg",
+            "unit_price_quantity_name": "Kilogram",
+            "discount": null,
+            "promotion": null,
+            "availability": {
+                "is_available": true,
+                "code": "available",
                 "description": "",
-                "is_new": false,
-                "children": [],
-                "campaign_banners": []
-            }
-        ],
-        "contents_html": "<div class=\"contents\">\n\n<h3>\nUtleveringsdager\n</h3>\n\n<p>\nAlle dager\n</p>\n\n<h3>\nStørrelse\n</h3>\n\n<p>\n320 gram\n</p>\n\n<p class=\"disclaimer\">\n\nLeverandøren\n\nhar ikke levert detaljert informasjon til oss om dette produktet.\n\n</p>\n\n</div>\n",
-        "nutrition_html": "<p> Vi har dessverre ikke næringsinnhold for dette produktet. </p>\n",
-        "alternative_products": [
-            {
-                "id": 16723,
-                "full_name": "Appelsiner i Nett Spania, 2 kg",
-                "brand": null,
-                "brand_id": null,
-                "name": "Appelsiner i Nett",
-                "name_extra": "Spania, 2 kg",
-                "front_url": "https://kolonial.no/produkter/16723-appelsiner-i-nett-spania/",
-                "images": [
-                    {
-                        "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/0/102/77302-36608-product_detail.jpg"
-                        },
-                        "large": {
-                            "url": "https://kolonial.no/media/uploads/public/0/102/77302-36608-product_large.jpg"
-                        }
-                    }
-                ],
-                "gross_price": "29.90",
-                "gross_unit_price": "14.95",
-                "unit_price_quantity_abbreviation": "kg",
-                "unit_price_quantity_name": "Kilogram",
-                "discount": null,
-                "promotion": null,
-                "availability": {
-                    "is_available": true,
-                    "code": "available",
-                    "description": "",
-                    "description_short": ""
-                },
-                "category_items": [
-                    {
-                        "id": 19495,
-                        "product_category_id": 21,
-                        "ordering": 350
-                    }
-                ],
-                "client_classifiers": []
+                "description_short": ""
             },
-            {
-                "id": 23922,
-                "full_name": "Økologiske Appelsiner Spania, 1 kg",
-                "brand": null,
-                "brand_id": null,
-                "name": "Økologiske Appelsiner",
-                "name_extra": "Spania, 1 kg",
-                "front_url": "https://kolonial.no/produkter/23922-okologiske-appelsiner-spania/",
-                "images": [
-                    {
-                        "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/153/15/699615-17055-product_detail.jpg"
-                        },
-                        "large": {
-                            "url": "https://kolonial.no/media/uploads/public/153/15/699615-17055-product_large.jpg"
-                        }
-                    }
-                ],
-                "gross_price": "59.90",
-                "gross_unit_price": "59.90",
-                "unit_price_quantity_abbreviation": "kg",
-                "unit_price_quantity_name": "Kilogram",
-                "discount": null,
-                "promotion": null,
-                "availability": {
-                    "is_available": true,
-                    "code": "available",
+            "category_items": [
+                {
+                    "id": 9174,
+                    "product_category_id": 21,
+                    "ordering": 70
+                }
+            ],
+            "client_classifiers": [],
+            "categories": [
+                {
+                    "id": 21,
+                    "name": "Frukt",
+                    "parent": 20,
+                    "ordering": 1010,
                     "description": "",
-                    "description_short": ""
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "contents_html": "<div class=\"contents\">\n\n<h3>\nUtleveringsdager\n</h3>\n\n<p>\nAlle dager\n</p>\n\n<h3>\nStørrelse\n</h3>\n\n<p>\n250 gram\n</p>\n\n<h3>\nOppbevaring\n</h3>\n\n<p>\n12 - 14 °C\n</p>\n\n<p class=\"disclaimer\">\n\nLeverandøren\n\nhar levert informasjonen ovenfor.\n\n</p>\n\n</div>\n",
+            "nutrition_html": "<table class=\"nutrition\"> <caption>Næringsinnhold pr. 100g/ml </caption><tbody> <tr><th> Energi</th> <td>352 kJ / 83 kcal </td></tr> <tr><th> Fett</th> <td>0,30 g </td></tr> <tr class=\"muted\"> <td>&mdash; mettede fettsyrer </td><td> 0,10 g </td></tr> <tr class=\"muted\"> <td>&mdash; flerumettede fettsyrer </td><td> 0,10 g </td></tr> <tr><th> Karbohydrater</th> <td>18,10 g </td></tr> <tr class=\"muted\"> <td>&mdash; sukkerarter </td><td> 13,90 g </td></tr> <tr class=\"muted\"> <td>&mdash; stivelse </td><td> 4,40 g </td></tr> <tr><th> Kostfiber</th> <td>1,70 g </td></tr> <tr><th> Protein</th> <td>1,10 g </td></tr> </tbody></table>\n",
+            "alternative_products": [
+                {
+                    "id": 19432,
+                    "full_name": "Økologiske Bananer 4-6 stk, Colombia, 600 g",
+                    "brand": null,
+                    "brand_id": null,
+                    "name": "Økologiske Bananer",
+                    "name_extra": "4-6 stk, Colombia, 600 g",
+                    "front_url": "https://kolonial.no/produkter/19432-okologiske-bananer-5-6-stk-colombia/",
+                    "images": [
+                        {
+                            "thumbnail": {
+                                "url": "https://kolonial.no/media/uploads/public/0/356/3556-998b7-product_detail.jpg"
+                            },
+                            "large": {
+                                "url": "https://kolonial.no/media/uploads/public/0/356/3556-998b7-product_large.jpg"
+                            }
+                        }
+                    ],
+                    "gross_price": "23.00",
+                    "gross_unit_price": "38.33",
+                    "unit_price_quantity_abbreviation": "kg",
+                    "unit_price_quantity_name": "Kilogram",
+                    "discount": null,
+                    "promotion": null,
+                    "availability": {
+                        "is_available": true,
+                        "code": "available",
+                        "description": "",
+                        "description_short": ""
+                    },
+                    "category_items": [
+                        {
+                            "id": 19033,
+                            "product_category_id": 21,
+                            "ordering": 80
+                        }
+                    ],
+                    "client_classifiers": [
+                        {
+                            "name": "Økologisk",
+                            "image_url": "https://kolonial.no/static/products/img/okologisk20x20@3x.ce61374c5376.png",
+                            "is_important": false
+                        },
+                        {
+                            "name": "Fairtrade",
+                            "image_url": "https://kolonial.no/static/products/img/fairtrade58x60.4426b27b7c82.png",
+                            "is_important": false
+                        }
+                    ]
                 },
-                "category_items": [
-                    {
-                        "id": 24528,
-                        "product_category_id": 21,
-                        "ordering": 360
+                {
+                    "id": 24854,
+                    "full_name": "Banan i Pose liten størrelse, ca. 1 kg",
+                    "brand": null,
+                    "brand_id": null,
+                    "name": "Banan i Pose",
+                    "name_extra": "liten størrelse, ca. 1 kg",
+                    "front_url": "https://kolonial.no/produkter/24854-banan-i-pose/",
+                    "images": null,
+                    "gross_price": "14.90",
+                    "gross_unit_price": "14.90",
+                    "unit_price_quantity_abbreviation": "kg",
+                    "unit_price_quantity_name": "Kilogram",
+                    "discount": null,
+                    "promotion": null,
+                    "availability": {
+                        "is_available": true,
+                        "code": "available",
+                        "description": "",
+                        "description_short": ""
+                    },
+                    "category_items": [
+                        {
+                            "id": 25611,
+                            "product_category_id": 21,
+                            "ordering": 610
+                        }
+                    ],
+                    "client_classifiers": []
+                }
+            ],
+            "discount_mix_and_match_products": null
+        },
+        {
+            "id": 9326,
+            "full_name": "Appelsin Spansk, 1 stk",
+            "brand": null,
+            "brand_id": null,
+            "name": "Appelsin",
+            "name_extra": "Spansk, 1 stk",
+            "front_url": "https://kolonial.no/produkter/9326-appelsin-spansk/",
+            "images": [
+                {
+                    "thumbnail": {
+                        "url": "https://kolonial.no/media/uploads/public/359/362/699162-ac329-product_detail.jpg"
+                    },
+                    "large": {
+                        "url": "https://kolonial.no/media/uploads/public/359/362/699162-ac329-product_large.jpg"
                     }
-                ],
-                "client_classifiers": [
-                    {
-                        "name": "Økologisk",
-                        "image_url": "https://kolonial.no/static/products/img/okologisk20x20@3x.ce61374c5376.png",
-                        "is_important": false
-                    }
-                ]
-            }
-        ],
-        "discount_mix_and_match_products": null
-    }
-    
+                }
+            ],
+            "gross_price": "6.90",
+            "gross_unit_price": "21.56",
+            "unit_price_quantity_abbreviation": "kg",
+            "unit_price_quantity_name": "Kilogram",
+            "discount": null,
+            "promotion": null,
+            "availability": {
+                "is_available": true,
+                "code": "available",
+                "description": "",
+                "description_short": ""
+            },
+            "category_items": [
+                {
+                    "id": 9171,
+                    "product_category_id": 21,
+                    "ordering": 330
+                }
+            ],
+            "client_classifiers": [],
+            "categories": [
+                {
+                    "id": 21,
+                    "name": "Frukt",
+                    "parent": 20,
+                    "ordering": 1010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "contents_html": "<div class=\"contents\">\n\n<h3>\nUtleveringsdager\n</h3>\n\n<p>\nAlle dager\n</p>\n\n<h3>\nStørrelse\n</h3>\n\n<p>\n320 gram\n</p>\n\n<p class=\"disclaimer\">\n\nLeverandøren\n\nhar ikke levert detaljert informasjon til oss om dette produktet.\n\n</p>\n\n</div>\n",
+            "nutrition_html": "<p> Vi har dessverre ikke næringsinnhold for dette produktet. </p>\n",
+            "alternative_products": [
+                {
+                    "id": 16723,
+                    "full_name": "Appelsiner i Nett Spania, 2 kg",
+                    "brand": null,
+                    "brand_id": null,
+                    "name": "Appelsiner i Nett",
+                    "name_extra": "Spania, 2 kg",
+                    "front_url": "https://kolonial.no/produkter/16723-appelsiner-i-nett-spania/",
+                    "images": [
+                        {
+                            "thumbnail": {
+                                "url": "https://kolonial.no/media/uploads/public/0/102/77302-36608-product_detail.jpg"
+                            },
+                            "large": {
+                                "url": "https://kolonial.no/media/uploads/public/0/102/77302-36608-product_large.jpg"
+                            }
+                        }
+                    ],
+                    "gross_price": "29.90",
+                    "gross_unit_price": "14.95",
+                    "unit_price_quantity_abbreviation": "kg",
+                    "unit_price_quantity_name": "Kilogram",
+                    "discount": null,
+                    "promotion": null,
+                    "availability": {
+                        "is_available": true,
+                        "code": "available",
+                        "description": "",
+                        "description_short": ""
+                    },
+                    "category_items": [
+                        {
+                            "id": 19495,
+                            "product_category_id": 21,
+                            "ordering": 350
+                        }
+                    ],
+                    "client_classifiers": []
+                },
+                {
+                    "id": 23922,
+                    "full_name": "Økologiske Appelsiner Spania, 1 kg",
+                    "brand": null,
+                    "brand_id": null,
+                    "name": "Økologiske Appelsiner",
+                    "name_extra": "Spania, 1 kg",
+                    "front_url": "https://kolonial.no/produkter/23922-okologiske-appelsiner-spania/",
+                    "images": [
+                        {
+                            "thumbnail": {
+                                "url": "https://kolonial.no/media/uploads/public/153/15/699615-17055-product_detail.jpg"
+                            },
+                            "large": {
+                                "url": "https://kolonial.no/media/uploads/public/153/15/699615-17055-product_large.jpg"
+                            }
+                        }
+                    ],
+                    "gross_price": "59.90",
+                    "gross_unit_price": "59.90",
+                    "unit_price_quantity_abbreviation": "kg",
+                    "unit_price_quantity_name": "Kilogram",
+                    "discount": null,
+                    "promotion": null,
+                    "availability": {
+                        "is_available": true,
+                        "code": "available",
+                        "description": "",
+                        "description_short": ""
+                    },
+                    "category_items": [
+                        {
+                            "id": 24528,
+                            "product_category_id": 21,
+                            "ordering": 360
+                        }
+                    ],
+                    "client_classifiers": [
+                        {
+                            "name": "Økologisk",
+                            "image_url": "https://kolonial.no/static/products/img/okologisk20x20@3x.ce61374c5376.png",
+                            "is_important": false
+                        }
+                    ]
+                }
+            ],
+            "discount_mix_and_match_products": null
+        }
+        
 
-    ],
+        ],
     "recipes": [
         {
             "id": 2580,
@@ -601,8 +601,520 @@
                     "already_in_cart": false
                 }
             ]
+        },
+        {
+            "id": 2582,
+            "title": "Lussekatter",
+            "front_url": "https://kolonial.no/oppskrifter/2582-spoon-lussekatter/",
+            "feature_image_url": "https://kolonial.no/media/uploads/public/105/139/650139-298ae-recipe_feature.jpg",
+            "difficulty_string": "Lett",
+            "cooking_duration_string": "1 t",
+            "concept_icons": [
+                {
+                    "name": "Barnevennlig",
+                    "image_url": "https://kolonial.no/static/recipes/img/icon-child-friendly-recipe-app.465cbc79476e.png"
+                }
+            ],
+            "is_liked_by_user": null,
+            "provider_name": "Silje Feiring",
+            "lead": "Ingen desember uten deilige og lune lussekatter til Luciadagen!",
+            "portion_price": "21.58",
+            "default_num_portions": 1,
+            "instructions_html": "<p class=\"lead\"> Ingen desember uten deilige og lune lussekatter til Luciadagen!</p><div class=\"body\"> <p>Denne oppskriften gir ca. 20 lussekatter</p><ol><li>&nbsp;Smelt smøret og tilsett melken, varm opp til melken er ca. 37 grader. Deretter smuldrer du inn gjæren og rører den ut, så tilsetter du til slutt gurkemeie og blander godt.&nbsp;</li><li>Tilsett salt, sukker, kardemomme og egg. Bland godt før du tilsetter melet litt og litt av gangen. Når deigen er smidig dekker du bakebollen med plast og lar den hvile på et lunt sted i ca. 60 minutter. Forvarm ovnen til 225 grader.&nbsp;</li><li>Når deigen er ferdig hevet legger du den på et melet underlag. Del i 20 deler, trill tynne pølser og form hver del i en S.</li><li>Pisk sammen egget og pensle lussekattene før du pynter med rosiner. Stekes i ca 8-10 minutter til de er lett gylne.&nbsp;</li></ol><br></div>\n",
+            "ingredient_list_html": "<table class=\"ingredient-list\"> <caption>Til 1 porsjoner</caption> <tr><th colspan=\"2\"> Deigen</th> </tr><tr> <td class=\"quantity\"> 200 g </td><td> <span class=\"title\">smør</span> </td></tr> <tr><td class=\"quantity\"> 5 dl </td><td> <span class=\"title\">melk, lett</span> </td></tr> <tr><td class=\"quantity\"> 50 g </td><td> <span class=\"title\">gjær, fersk</span> </td></tr> <tr><td class=\"quantity\"> 1 stk </td><td> <span class=\"title\">egg</span> </td></tr> <tr><td class=\"quantity\"> 1,5 kg </td><td> <span class=\"title\">hvetemel, siktet</span> </td></tr> <tr><td class=\"quantity\"> 0,25 g </td><td> <span class=\"title\">gurkemeie</span> </td></tr> <tr><td class=\"quantity\"> 150 g </td><td> <span class=\"title\">sukker</span> </td></tr> <tr><td class=\"quantity\"> 1 ts </td><td> <span class=\"title\">salt</span> </td></tr> <tr><td class=\"quantity\"> 2 ts </td><td> <span class=\"title\">kardemomme</span> </td></tr> <tr><th colspan=\"2\"> Før steking </th></tr> <tr><td class=\"quantity\"> 1 stk </td><td> <span class=\"title\">egg</span> <span class=\"hint\">, til pensling</span> </td></tr> <tr><td class=\"quantity\"> 2 ss </td><td> <span class=\"title\">rosiner</span> <span class=\"hint\">, til pynt</span> </td></tr> </table>\n",
+            "ingredients": [
+                {
+                    "id": 29292,
+                    "product": {
+                        "id": 12235,
+                        "full_name": "Tine Ekte Meieri Smør 250 g",
+                        "brand": "Tine",
+                        "brand_id": 18,
+                        "name": "Ekte Meieri Smør",
+                        "name_extra": "250 g",
+                        "front_url": "https://kolonial.no/produkter/12235-tine-tinesmor-1-4kg/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/278/206/818206-4b32c-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/278/206/818206-4b32c-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "27.60",
+                        "gross_unit_price": "110.40",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 11343,
+                                "product_category_id": 53,
+                                "ordering": 210
+                            }
+                        ],
+                        "client_classifiers": [
+                            {
+                                "name": "Nyt Norge",
+                                "image_url": "https://kolonial.no/static/products/img/nytnorge53x60.aac84641427c.png",
+                                "is_important": false
+                            }
+                        ]
+                    },
+                    "portion_quantity": "0.800",
+                    "is_basic": true,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29293,
+                    "product": {
+                        "id": 8143,
+                        "full_name": "Tine TineMelk Lett 1,75 l",
+                        "brand": "Tine",
+                        "brand_id": 18,
+                        "name": "TineMelk Lett",
+                        "name_extra": "1,75 l",
+                        "front_url": "https://kolonial.no/produkter/8143-tine-tinemelk-lett-175l/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/315/128/122528-1159a-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/315/128/122528-1159a-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "32.00",
+                        "gross_unit_price": "18.29",
+                        "unit_price_quantity_abbreviation": "l",
+                        "unit_price_quantity_name": "Liter",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 8040,
+                                "product_category_id": 49,
+                                "ordering": 10
+                            }
+                        ],
+                        "client_classifiers": [
+                            {
+                                "name": "Nyt Norge",
+                                "image_url": "https://kolonial.no/static/products/img/nytnorge53x60.aac84641427c.png",
+                                "is_important": false
+                            }
+                        ]
+                    },
+                    "portion_quantity": "0.286",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29294,
+                    "product": {
+                        "id": 41,
+                        "full_name": "Idun Fersk Gjær Original 50 g",
+                        "brand": "Idun",
+                        "brand_id": 36,
+                        "name": "Fersk Gjær Original",
+                        "name_extra": "50 g",
+                        "front_url": "https://kolonial.no/produkter/41-idun-fersk-gjaer-original-50g/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/242/124/825724-6230d-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/242/124/825724-6230d-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "4.40",
+                        "gross_unit_price": "88.00",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 117,
+                                "product_category_id": 18,
+                                "ordering": 170
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "1.000",
+                    "is_basic": false,
+                    "has_alternative_products": false,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29295,
+                    "product": {
+                        "id": 4972,
+                        "full_name": "Solvinge Frokostegg Fra Frittgående Høner Str L, 12 stk",
+                        "brand": "Solvinge",
+                        "brand_id": 617,
+                        "name": "Frokostegg Fra Frittgående Høner",
+                        "name_extra": "Str L, 12 stk",
+                        "front_url": "https://kolonial.no/produkter/4972-solvinge-frokostegg-fra-frittgaende-honer-str-l-12/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/307/326/821926-de325-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/307/326/821926-de325-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "45.90",
+                        "gross_unit_price": "51.00",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 5784,
+                                "product_category_id": 50,
+                                "ordering": 50
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.167",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29302,
+                    "product": {
+                        "id": 16455,
+                        "full_name": "Godt Brød Siktet Hvetemel Økologisk, 1 kg",
+                        "brand": "Godt Brød",
+                        "brand_id": 1044,
+                        "name": "Siktet Hvetemel",
+                        "name_extra": "Økologisk, 1 kg",
+                        "front_url": "https://kolonial.no/produkter/16455-godt-brod-siktet-hvetemel-okologisk/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/0/263/40263-d2708-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/0/263/40263-d2708-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "31.80",
+                        "gross_unit_price": "31.80",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 13803,
+                                "product_category_id": 16,
+                                "ordering": 120
+                            }
+                        ],
+                        "client_classifiers": [
+                            {
+                                "name": "Økologisk",
+                                "image_url": "https://kolonial.no/static/products/img/okologisk20x20@3x.ce61374c5376.png",
+                                "is_important": false
+                            }
+                        ]
+                    },
+                    "portion_quantity": "1.500",
+                    "is_basic": true,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29296,
+                    "product": {
+                        "id": 6175,
+                        "full_name": "Toro Gurkemeie 70 g",
+                        "brand": "Toro",
+                        "brand_id": 23,
+                        "name": "Gurkemeie",
+                        "name_extra": "70 g",
+                        "front_url": "https://kolonial.no/produkter/6175-toro-gurkemeie-70g/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/71/143/825743-7e2f1-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/71/143/825743-7e2f1-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "38.80",
+                        "gross_unit_price": "554.29",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 6633,
+                                "product_category_id": 39,
+                                "ordering": 380
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.004",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29297,
+                    "product": {
+                        "id": 7813,
+                        "full_name": "Dansukker Sukker 1 kg",
+                        "brand": "Dansukker",
+                        "brand_id": 166,
+                        "name": "Sukker",
+                        "name_extra": "1 kg",
+                        "front_url": "https://kolonial.no/produkter/7813-dansukker-sukker-1kg/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/334/121/508521-2ed8a-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/334/121/508521-2ed8a-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "17.90",
+                        "gross_unit_price": "17.90",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 7800,
+                                "product_category_id": 16,
+                                "ordering": 70
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.150",
+                    "is_basic": true,
+                    "has_alternative_products": false,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29298,
+                    "product": {
+                        "id": 11008,
+                        "full_name": "Jozo Jozo Fint Salt Med Jod, 1 kg",
+                        "brand": "Jozo",
+                        "brand_id": 147,
+                        "name": "Jozo Fint Salt",
+                        "name_extra": "Med Jod, 1 kg",
+                        "front_url": "https://kolonial.no/produkter/11008-jozo-jozo-fint-salt-med-jod/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/0/199/51799-fd2ca-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/0/199/51799-fd2ca-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "10.30",
+                        "gross_unit_price": "10.30",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 16609,
+                                "product_category_id": 18,
+                                "ordering": 710
+                            },
+                            {
+                                "id": 16612,
+                                "product_category_id": 39,
+                                "ordering": 180
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.006",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29299,
+                    "product": {
+                        "id": 6169,
+                        "full_name": "Toro Kardemomme 46 g",
+                        "brand": "Toro",
+                        "brand_id": 23,
+                        "name": "Kardemomme",
+                        "name_extra": "46 g",
+                        "front_url": "https://kolonial.no/produkter/6169-toro-kardemomme-46g/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/69/146/825746-e94d2-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/69/146/825746-e94d2-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "34.80",
+                        "gross_unit_price": "756.52",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 6630,
+                                "product_category_id": 39,
+                                "ordering": 470
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.002",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29301,
+                    "product": {
+                        "id": 16,
+                        "full_name": "Sun·Maid Rosiner 500 g",
+                        "brand": "Sun·Maid",
+                        "brand_id": 99,
+                        "name": "Rosiner",
+                        "name_extra": "500 g",
+                        "front_url": "https://kolonial.no/produkter/16-sun-maid-rosiner/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/77/137/820137-5c443-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/77/137/820137-5c443-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "38.30",
+                        "gross_unit_price": "76.60",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 51,
+                                "product_category_id": 18,
+                                "ordering": 470
+                            },
+                            {
+                                "id": 54,
+                                "product_category_id": 24,
+                                "ordering": 330
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.003",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                }
+            ]
         }
     
+
 
     ]
 }

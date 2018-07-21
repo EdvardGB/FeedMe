@@ -1,17 +1,18 @@
-import React, {Component} from 'react';
-import { connect } from "react-redux";
+import React, {PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from "react-redux";
+import { NavLink } from 'react-router-dom';
+
 
 import Search from '../components/searchComponent';
-import RecipeComponent from '../components/recipeComponent';
+import RecipeComponent from '../components/recipe/recipeComponent';
 
 import Recipe from '../interfaces/recipe'; 
 
 import * as recipeActions from '../actions/recipeAction';
+import * as shopListActions from '../actions/shopListActions';
 
-import sampleData from '../../../sampleData';
-
-class Recipes extends Component {
+class Recipes extends PureComponent  {
 
     constructor(props) {
         super(props); 
@@ -20,10 +21,7 @@ class Recipes extends Component {
         }
     }
 
-    componentDidMount(){
-        sampleData.recipes.map(recipe => this.props.addRecipe(
-            new Recipe(recipe)))
-    }
+    
 
     searchOnChange(value){
         this.setState({value: value})
@@ -32,12 +30,15 @@ class Recipes extends Component {
     render () {
         return (
             <div>
+                <NavLink to='/shoplist'>shoplist</NavLink>
                 <div><Search value={this.state.value} onChange={this.searchOnChange.bind(this)}/></div>
                 {this.props.recipes.map(recipe => 
                     <RecipeComponent 
                         key={recipe.id} 
                         recipe={recipe}
                         classes={{card: 'card', media: 'media'}}
+                        addIngredient = {this.props.addIngToShopList}
+                        removeIngredient = {this.props.removeIngToShopList}
                 />)}
             </div>
         )
@@ -56,9 +57,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        addRecipe: (arg) => {recipeActions.add(dispatch, arg)}
+        addIngToShopList: (arg) => {shopListActions.add(dispatch, arg)},
+        removeIngToShopList: (arg) => {shopListActions.remove(dispatch, arg)}
     };
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recipes) 
+export default connect(mapStateToProps, mapDispatchToProps)(Recipes)

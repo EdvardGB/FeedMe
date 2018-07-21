@@ -10,5 +10,4 @@ export default class Recipe {
         this.image = data['feature_image_url']
     }
 
-  
 }

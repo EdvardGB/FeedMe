@@ -5,6 +5,9 @@ export default class Ingredient {
         this.name = data.name;
         this.thumbnail = data.images ? data.images.thumbnail : null 
         this.id = data.id
+
+        this.inFridge = false;
+        this.inShoppingList = false;
     }
 
     aleternatives(products){
