@@ -8,6 +8,8 @@ export default class Recipe {
         this.title = data.title
         this.ingredients = data.ingredients.map(ingredient => new Ingredient(ingredient.product))  
         this.image = data['feature_image_url']
+        this.url = this.title.replace(/\s/g, '%20')
+        this.instruction = data['instructions_html']
     }
 
 }

@@ -1,18 +1,21 @@
 import React, {PureComponent} from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
+
 import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom'
 
 import Recipes from './containers/recipes';
 import ShopList from './containers/shopList';
 import Fridge from './containers/fridge';
+import RecipePage from './containers/recipePage';
 import NotFound from './containers/notFound';
 
 import Recipe from './interfaces/recipe'; 
 import sampleData from '../../sampleData';
-
+import PropTypes from 'prop-types';
 import * as recipeActions from './actions/recipeAction';
 import * as APIService from './services/apiService';
+import recipePage from './containers/recipePage';
 
 class App extends PureComponent  {
 
@@ -21,7 +24,7 @@ class App extends PureComponent  {
     }
     
     testClick(){
-        APIService.getAPI('recipes/2582/').then(response => 
+        APIService.getAPI('recipes/2583/').then(response => 
             response.json().then(data => console.log(JSON.stringify(data,null,4)))
         )
     }
@@ -40,6 +43,18 @@ class App extends PureComponent  {
                         <Route exact path="/" component={Recipes} />
                         <Route path="/shoplist" component={ShopList} />
                         <Route path="/fridge" component={Fridge} />
+                        <Route path="/:recipe" render={()=> {
+                            let match = this.props.recipes.filter(recipe => {
+                                if(this.props.location.pathname === "/" + recipe.title){
+                                    return  recipe
+                                }
+                            })
+                            if( match.size > 0){
+                                return match ? <RecipePage recipe={match.get(0)} /> : <NotFound /> 
+                            } else { return <NotFound /> }
+
+
+                        }} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>
@@ -49,11 +64,14 @@ class App extends PureComponent  {
 }
 
 
+App.propTypes  = {
+    recipes: PropTypes.object
+}
 
 function mapStateToProps(state) {
     //console.log(state.get('shopList'))
     return {
-      
+      recipes: state.get('recipes')
     };
 }
 

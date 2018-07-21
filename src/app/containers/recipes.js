@@ -2,6 +2,7 @@ import React, {PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
 
 
 import Search from '../components/searchComponent';
@@ -68,4 +69,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recipes)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Recipes))

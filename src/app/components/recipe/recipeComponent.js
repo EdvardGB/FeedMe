@@ -2,6 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { NavLink } from 'react-router-dom';
+import { Route, Redirect } from 'react-router'
 
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -18,6 +20,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
+import ImportContacts from '@material-ui/icons/ImportContacts'
 
 
 import IngredientComponent from './recipeIngredientComponent';
@@ -32,6 +35,14 @@ export default class RecipeComponent extends React.PureComponent {
             expanded: false,
             refresh: false
         };
+    }
+
+    getPrice(){
+        let price = 0
+        this.props.recipe.ingredients.forEach(ingredient =>{
+            price+=parseFloat(ingredient.price)
+        })
+        return price + ";-"
     }
 
     getRelativeIngredients(){
@@ -75,24 +86,31 @@ export default class RecipeComponent extends React.PureComponent {
 		return (
             <div>
                 <Card className="recipe">
-                    <CardMedia
-                            className="recipe-media"
-                            image={recipe.image}
-                        />
-                    <CardHeader
-                        action={
-                        <IconButton
-                            onClick={this.handleExpandClick.bind(this)}
-                            aria-expanded={this.state.expanded}
-                            aria-label="Show more"
-                        >
-                            <ExpandMoreIcon />
-                        </IconButton>
-                        }
-                        title={recipe.title}
-                        subheader={this.getRelativeIngredients()}
+                        <CardMedia
+                                className="recipe-media"
+                                image={recipe.image}
+                            />
+                        <CardHeader
+                            action={<div>
+                                <IconButton
+                                    onClick={this.handleExpandClick.bind(this)}
+                                    aria-expanded={this.state.expanded}
+                                    aria-label="Show more"
+                                >
+                                    <ExpandMoreIcon />
+                                </IconButton>
+                                <NavLink
+                                    to={recipe.url}
+                                >
+                                    <ImportContacts />
+                                </NavLink>
 
-                    />
+                            </div>
+                            }
+                            title={recipe.title}
+                            subheader={this.getRelativeIngredients() + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" + this.getPrice()}
+                            
+                        />  
                     
                     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                         <CardContent>
@@ -129,6 +147,7 @@ export default class RecipeComponent extends React.PureComponent {
                         </CardContent>
                     </Collapse>
                 </Card>
+
             </div>
 		);
 	}
