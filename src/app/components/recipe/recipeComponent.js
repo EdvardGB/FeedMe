@@ -38,23 +38,31 @@ export default class RecipeComponent extends React.PureComponent {
     }
 
     getPrice(){
+        let { recipe } = this.props
         let price = 0
-        this.props.recipe.ingredients.forEach(ingredient =>{
-            price+=parseFloat(ingredient.price)
-        })
-        return price + ";-"
+        if(recipe.ingredients){
+            this.props.recipe.ingredients.forEach(ingredient =>{
+                price+=parseFloat(ingredient.price)
+            })
+            return price.toFixed(2) + ";-"
+        }
+        return "npf"
     }
 
     getRelativeIngredients(){
-        let numbIng = this.props.recipe.ingredients.length
+        let { recipe, fridge } = this.props
         let numbFridge = 0
-        this.props.recipe.ingredients.forEach(recipeIng =>{
-            this.props.fridge.forEach(fridgeIng => {
-                if(fridgeIng === recipeIng){
-                    numbFridge+=1
-                }
+        let numbIng = 0
+        if(recipe.ingredients){
+            recipe.ingredients.length 
+            recipe.ingredients.forEach(recipeIng =>{
+                fridge.forEach(fridgeIng => {
+                    if(fridgeIng === recipeIng){
+                        numbFridge+=1
+                    }
+                })
             })
-        })
+        }
         return numbFridge + "/" + numbIng
     }
 
@@ -102,23 +110,30 @@ export default class RecipeComponent extends React.PureComponent {
                                 <NavLink
                                     to={recipe.url}
                                 >
-                                    <ImportContacts />
+                                    <IconButton
+                                        onClick={this.handleExpandClick.bind(this)}
+                                        aria-expanded={this.state.expanded}
+                                        aria-label="Show more"
+                                    >
+                                        <ImportContacts />
+                                    </IconButton>
                                 </NavLink>
-
                             </div>
                             }
                             title={recipe.title}
                             subheader={this.getRelativeIngredients() + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" + this.getPrice()}
                             
                         />  
-                    
+                    {/*
                     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                         <CardContent>
                         <Table>
                             <TableHead>
                                 <TableRow>
                                     <TableCell>Ingredients</TableCell>
-                                    <TableCell>Add to shoppinglist</TableCell>
+                                    <TableCell>mengde</TableCell>
+                                    <TableCell>legg til i handleliste</TableCell>
+                                    <TableCell>i køleskapet?</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -126,10 +141,17 @@ export default class RecipeComponent extends React.PureComponent {
                                     <TableCell component="th" scope="row">
                                         
                                     </TableCell>
+                                    <TableCell component="th" scope="row">
+                                        
+                                    </TableCell>
+                                    
                                     <TableCell>
                                         <Checkbox  
                                             onChange={this.onChange.bind(this)}
                                         />
+                                    </TableCell>
+                                    <TableCell component="th" scope="row">
+                                        
                                     </TableCell>
                                 </TableRow>
                                 {this.props.recipe.ingredients.map(ingredient => 
@@ -145,7 +167,7 @@ export default class RecipeComponent extends React.PureComponent {
                             </TableBody>
                         </Table>
                         </CardContent>
-                    </Collapse>
+                    </Collapse> */}
                 </Card>
 
             </div>

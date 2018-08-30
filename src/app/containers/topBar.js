@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
-import { connect } from "react-redux";
 import PropTypes from 'prop-types';
+import { connect } from "react-redux";
+import { NavLink } from 'react-router-dom';
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 
 
-class Recipes extends Component {
+class TopBar extends Component {
 
     constructor(props) {
         super(props); 
@@ -12,15 +19,32 @@ class Recipes extends Component {
     
     render () {
         return (
-            <div>
-               <div>Search</div>
-               <div>Display 5 recipes</div>
-            </div>
+            <div >
+                <AppBar position="static">
+                    <Toolbar>
+                        <Typography variant="title" color="inherit" >
+                            Feed Me
+                        </Typography>
+                        <NavLink to='/' className="TopBarLink">
+                            <Button color="inherit">Tilbud</Button>
+                        </NavLink>
+                        <NavLink to='/' className="TopBarLink">
+                            <Button color="inherit">Oppskrifter</Button>
+                        </NavLink>
+                        <NavLink to='/handlekurv' className="TopBarLink">
+                            <Button color="inherit">Handlekurv</Button>
+                        </NavLink>
+                        <NavLink to='/kjoleskap' className="TopBarLink">
+                            <Button color="inherit">Kjøleskap</Button>
+                        </NavLink>
+                    </Toolbar>
+                </AppBar>
+                </div>
         )
     }
 }
 
-Recipes.propTypes  = {
+TopBar.propTypes  = {
 
 }
 
@@ -36,4 +60,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recipes) 
+export default connect(mapStateToProps, mapDispatchToProps)(TopBar) 

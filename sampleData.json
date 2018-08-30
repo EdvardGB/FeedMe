@@ -279,7 +279,7 @@
         }
         
 
-        ],
+    ],
     "recipes": [
         {
             "id": 2580,
@@ -1586,9 +1586,2382 @@
                     "already_in_cart": false
                 }
             ]
+        },
+        {
+            "id": 2584,
+            "title": "Tacosuppe",
+            "front_url": "https://kolonial.no/oppskrifter/2584-marit-marvik-tacosuppe/",
+            "feature_image_url": "https://kolonial.no/media/uploads/public/231/178/658978-a19c6-recipe_feature.jpg",
+            "difficulty_string": "Lett",
+            "cooking_duration_string": "10 min",
+            "concept_icons": [
+                {
+                    "name": "Barnevennlig",
+                    "image_url": "https://kolonial.no/static/recipes/img/icon-child-friendly-recipe-app.465cbc79476e.png"
+                }
+            ],
+            "is_liked_by_user": null,
+            "provider_name": "Marit Marvik",
+            "lead": "Smakfull og fyldig tomatsuppe med meksikansk vri!",
+            "portion_price": "23.53",
+            "default_num_portions": 4,
+            "instructions_html": "<p class=\"lead\"> Smakfull og fyldig tomatsuppe med meksikansk vri!</p><div class=\"body\"> <ol><li>Stek kjøttdeigen i middels varm panne med litt olje i.&nbsp;</li><li>\rDryss suppeposens innhold i en kjele. Hell i vann, melk og kok opp under omrøring. La suppen småkoke i 5 minutter og ha i maisen og kjøttdeigen de siste to minuttene.</li></ol><p><strong>Tips! </strong>Hell over i termos og ta med på tur. Server gjerne med tortillachips som tilbehør</p></div>\n",
+            "ingredient_list_html": "<table class=\"ingredient-list\"> <caption>Til 4 porsjoner</caption> <tr><th colspan=\"2\"> </th></tr> <tr><td class=\"quantity\"> 400 g </td><td> <span class=\"title\">kjøttdeig, storfe</span> </td></tr> <tr><td class=\"quantity\"> 1 ss </td><td> <span class=\"title\">rapsolje</span> </td></tr> <tr><td class=\"quantity\"> 1 pk </td><td> <span class=\"title\">meksikansk tomatsuppe, miks</span> </td></tr> <tr><td class=\"quantity\"> 7 dl </td><td> <span class=\"title\">vann</span> </td></tr> <tr><td class=\"quantity\"> 3 dl </td><td> <span class=\"title\">melk, lett</span> </td></tr> <tr><td class=\"quantity\"> 1 stk </td><td> <span class=\"title\">maiskorn</span> </td></tr> </table>\n",
+            "ingredients": [
+                {
+                    "id": 29326,
+                    "product": {
+                        "id": 3853,
+                        "full_name": "Nordfjord Kjøttdeig av Storfe 14%, 400 g",
+                        "brand": "Nordfjord",
+                        "brand_id": 638,
+                        "name": "Kjøttdeig av Storfe",
+                        "name_extra": "14%, 400 g",
+                        "front_url": "https://kolonial.no/produkter/3853-nordfjord-kvernet-deig-av-storfe-14-400g/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/385/184/822584-ee6fd-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/385/184/822584-ee6fd-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "48.60",
+                        "gross_unit_price": "121.50",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 20449,
+                                "product_category_id": 304,
+                                "ordering": 30
+                            }
+                        ],
+                        "client_classifiers": [
+                            {
+                                "name": "Holdbarhetsgaranti i 5 dager",
+                                "image_url": "https://kolonial.no/static/products/img/expiry-5-20x20@3x.503f47d76f75.png",
+                                "is_important": true
+                            },
+                            {
+                                "name": "Nyt Norge",
+                                "image_url": "https://kolonial.no/static/products/img/nytnorge53x60.aac84641427c.png",
+                                "is_important": false
+                            }
+                        ]
+                    },
+                    "portion_quantity": "0.250",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29327,
+                    "product": {
+                        "id": 22318,
+                        "full_name": "Coroli Rapsolje 1 l",
+                        "brand": "Coroli",
+                        "brand_id": 1189,
+                        "name": "Rapsolje",
+                        "name_extra": "1 l",
+                        "front_url": "https://kolonial.no/produkter/22318-coroli-rapsolje/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/0/160/99760-69d42-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/0/160/99760-69d42-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "16.80",
+                        "gross_unit_price": "16.80",
+                        "unit_price_quantity_abbreviation": "l",
+                        "unit_price_quantity_name": "Liter",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 22222,
+                                "product_category_id": 38,
+                                "ordering": 150
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.004",
+                    "is_basic": true,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29328,
+                    "product": {
+                        "id": 717,
+                        "full_name": "Toro Meksikansk tomatsuppe 100 g",
+                        "brand": "Toro",
+                        "brand_id": 23,
+                        "name": "Meksikansk tomatsuppe",
+                        "name_extra": "100 g",
+                        "front_url": "https://kolonial.no/produkter/717-toro-meksikansk-tomatsuppe/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/213/245/826245-82918-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/213/245/826245-82918-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "28.90",
+                        "gross_unit_price": "289.00",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 1575,
+                                "product_category_id": 119,
+                                "ordering": 180
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.250",
+                    "is_basic": false,
+                    "has_alternative_products": false,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29330,
+                    "product": {
+                        "id": 8143,
+                        "full_name": "Tine TineMelk Lett 1,75 l",
+                        "brand": "Tine",
+                        "brand_id": 18,
+                        "name": "TineMelk Lett",
+                        "name_extra": "1,75 l",
+                        "front_url": "https://kolonial.no/produkter/8143-tine-tinemelk-lett-175l/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/315/128/122528-1159a-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/315/128/122528-1159a-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "32.00",
+                        "gross_unit_price": "18.29",
+                        "unit_price_quantity_abbreviation": "l",
+                        "unit_price_quantity_name": "Liter",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 8040,
+                                "product_category_id": 49,
+                                "ordering": 10
+                            }
+                        ],
+                        "client_classifiers": [
+                            {
+                                "name": "Nyt Norge",
+                                "image_url": "https://kolonial.no/static/products/img/nytnorge53x60.aac84641427c.png",
+                                "is_important": false
+                            }
+                        ]
+                    },
+                    "portion_quantity": "0.043",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                },
+                {
+                    "id": 29331,
+                    "product": {
+                        "id": 24359,
+                        "full_name": "Maiskorn Supersweet 3 x 150g, 450 g",
+                        "brand": null,
+                        "brand_id": null,
+                        "name": "Maiskorn Supersweet",
+                        "name_extra": "3 x 150g, 450 g",
+                        "front_url": "https://kolonial.no/produkter/24359-maiskorn-supersweet-3-x-150g/",
+                        "images": [
+                            {
+                                "thumbnail": {
+                                    "url": "https://kolonial.no/media/uploads/public/152/225/145025-428f8-product_detail.jpg"
+                                },
+                                "large": {
+                                    "url": "https://kolonial.no/media/uploads/public/152/225/145025-428f8-product_large.jpg"
+                                }
+                            }
+                        ],
+                        "gross_price": "17.90",
+                        "gross_unit_price": "39.78",
+                        "unit_price_quantity_abbreviation": "kg",
+                        "unit_price_quantity_name": "Kilogram",
+                        "discount": null,
+                        "promotion": null,
+                        "availability": {
+                            "is_available": true,
+                            "code": "available",
+                            "description": "",
+                            "description_short": ""
+                        },
+                        "category_items": [
+                            {
+                                "id": 25406,
+                                "product_category_id": 9,
+                                "ordering": 220
+                            }
+                        ],
+                        "client_classifiers": []
+                    },
+                    "portion_quantity": "0.156",
+                    "is_basic": false,
+                    "has_alternative_products": true,
+                    "already_in_cart": false
+                }
+            ]
         }
     
 
 
+    ],
+    "RecipeCategories": [
+        {
+            "id": 1,
+            "title": "Få ingredienser"
+        },
+        {
+            "id": 28,
+            "title": "Hverdag"
+        },
+        {
+            "id": 2,
+            "title": "Mat som lager seg selv"
+        },
+        {
+            "id": 45,
+            "title": "Taco"
+        },
+        {
+            "id": 15,
+            "title": "Lam og kje"
+        },
+        {
+            "id": 56,
+            "title": "Grill"
+        },
+        {
+            "id": 39,
+            "title": "Lune retter"
+        },
+        {
+            "id": 79,
+            "title": "Pizza"
+        },
+        {
+            "id": 21,
+            "title": "Snille smaker"
+        },
+        {
+            "id": 12,
+            "title": "Storfekjøtt"
+        },
+        {
+            "id": 3,
+            "title": "Bra restemat"
+        },
+        {
+            "id": 65,
+            "title": "Middag"
+        },
+        {
+            "id": 31,
+            "title": "Kos"
+        },
+        {
+            "id": 34,
+            "title": "Salater"
+        },
+        {
+            "id": 19,
+            "title": "Pasta"
+        },
+        {
+            "id": 16,
+            "title": "Supper"
+        },
+        {
+            "id": 25,
+            "title": "Kylling"
+        },
+        {
+            "id": 17,
+            "title": "Fisk"
+        },
+        {
+            "id": 18,
+            "title": "Sjømat"
+        },
+        {
+            "id": 43,
+            "title": "Vegetar"
+        },
+        {
+            "id": 49,
+            "title": "Barnevennlig"
+        },
+        {
+            "id": 37,
+            "title": "Tilbehør"
+        },
+        {
+            "id": 63,
+            "title": "Kaker"
+        },
+        {
+            "id": 68,
+            "title": "Dessert"
+        },
+        {
+            "id": 55,
+            "title": "Ferdig på 15 minutter"
+        }
+    ],
+    "ingredientCategories": [
+        {
+            "id": 20,
+            "name": "Frukt og grønt",
+            "parent": null,
+            "ordering": 1000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 9,
+                    "name": "Hermetisert frukt og grønt",
+                    "parent": 20,
+                    "ordering": 1050,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 21,
+                    "name": "Frukt",
+                    "parent": 20,
+                    "ordering": 1010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 22,
+                    "name": "Grønnsaker",
+                    "parent": 20,
+                    "ordering": 1020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 23,
+                    "name": "Urter og spirer",
+                    "parent": 20,
+                    "ordering": 1030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 24,
+                    "name": "Frø, nøtter og tørket frukt",
+                    "parent": 20,
+                    "ordering": 1040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 57,
+                    "name": "Frossen frukt og grønt",
+                    "parent": 20,
+                    "ordering": 1060,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 347,
+                    "name": "Poteter",
+                    "parent": 20,
+                    "ordering": 1023,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 391,
+                    "name": "Salater og kål",
+                    "parent": 20,
+                    "ordering": 1015,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 325,
+                    "name": "Ferdigkuttet frukt og grønt",
+                    "parent": 20,
+                    "ordering": 1017,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 422,
+                    "name": "Ferdig kuttede salater",
+                    "parent": 20,
+                    "ordering": 1013,
+                    "description": "",
+                    "is_new": true,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 423,
+                    "name": "Bær",
+                    "parent": 20,
+                    "ordering": 1012,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 401,
+            "name": "Blomster og planter",
+            "parent": null,
+            "ordering": 1500,
+            "description": "",
+            "is_new": true,
+            "children": [
+                {
+                    "id": 336,
+                    "name": "Roser",
+                    "parent": 401,
+                    "ordering": 1510,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 402,
+                    "name": "Snittblomster",
+                    "parent": 401,
+                    "ordering": 1520,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 403,
+                    "name": "Grønne planter",
+                    "parent": 401,
+                    "ordering": 1530,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 1,
+            "name": "Brød og frokostblandinger",
+            "parent": null,
+            "ordering": 2000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 2,
+                    "name": "Ferske brød",
+                    "parent": 1,
+                    "ordering": 2010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 4,
+                    "name": "Knekkebrød",
+                    "parent": 1,
+                    "ordering": 2030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 6,
+                    "name": "Pølsebrød, hamburgerbrød og boller",
+                    "parent": 1,
+                    "ordering": 2040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 13,
+                    "name": "Frokostblandinger og gryn",
+                    "parent": 1,
+                    "ordering": 2050,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 99,
+                    "name": "Frosne brød og rundstykker",
+                    "parent": 1,
+                    "ordering": 2020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 116,
+                    "name": "Deiger og bunner",
+                    "parent": 1,
+                    "ordering": 2055,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 393,
+                    "name": "Langtidsholdbare brød",
+                    "parent": 1,
+                    "ordering": 2015,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 48,
+            "name": "Melk, meieriprodukter og egg",
+            "parent": null,
+            "ordering": 3000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 49,
+                    "name": "Melk",
+                    "parent": 48,
+                    "ordering": 3010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 50,
+                    "name": "Egg",
+                    "parent": 48,
+                    "ordering": 3385,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 51,
+                    "name": "Yoghurt",
+                    "parent": 48,
+                    "ordering": 3400,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 52,
+                    "name": "Fløte og rømmeprodukter",
+                    "parent": 48,
+                    "ordering": 3390,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 53,
+                    "name": "Smør og margarin",
+                    "parent": 48,
+                    "ordering": 3380,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 26,
+            "name": "Kjøtt og kylling",
+            "parent": null,
+            "ordering": 4000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 28,
+                    "name": "Kylling, kalkun og and",
+                    "parent": 26,
+                    "ordering": 4007,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 29,
+                    "name": "Pølser",
+                    "parent": 26,
+                    "ordering": 4040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 204,
+                    "name": "Bacon og tilbehør",
+                    "parent": 26,
+                    "ordering": 4009,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 304,
+                    "name": "Kjøttdeig og Karbonadedeig",
+                    "parent": 26,
+                    "ordering": 4010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 307,
+                    "name": "Hamburgere",
+                    "parent": 26,
+                    "ordering": 4025,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 310,
+                    "name": "Kjøttboller og karbonader",
+                    "parent": 26,
+                    "ordering": 4028,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 388,
+                    "name": "Storfe",
+                    "parent": 26,
+                    "ordering": 4005,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 389,
+                    "name": "Svin",
+                    "parent": 26,
+                    "ordering": 4006,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 390,
+                    "name": "Lam og vilt",
+                    "parent": 26,
+                    "ordering": 4008,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 283,
+            "name": "Fisk og sjømat",
+            "parent": null,
+            "ordering": 4300,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 286,
+                    "name": "Fersk fisk",
+                    "parent": 283,
+                    "ordering": 4310,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 289,
+                    "name": "Skalldyr",
+                    "parent": 283,
+                    "ordering": 4320,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 292,
+                    "name": "Fiskekaker",
+                    "parent": 283,
+                    "ordering": 4330,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 295,
+                    "name": "Hermetisert sjømat",
+                    "parent": 283,
+                    "ordering": 4340,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 298,
+                    "name": "Frossen fisk og sjømat",
+                    "parent": 283,
+                    "ordering": 4350,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 301,
+                    "name": "Røkt og gravet fisk",
+                    "parent": 283,
+                    "ordering": 4325,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 142,
+            "name": "Oster",
+            "parent": null,
+            "ordering": 4500,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 43,
+                    "name": "Gulost",
+                    "parent": 142,
+                    "ordering": 4510,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 145,
+                    "name": "Smøreost og prim",
+                    "parent": 142,
+                    "ordering": 4520,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 148,
+                    "name": "Spesialoster",
+                    "parent": 142,
+                    "ordering": 4530,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 151,
+                    "name": "Brunost",
+                    "parent": 142,
+                    "ordering": 4515,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 421,
+                    "name": "Revet Ost",
+                    "parent": 142,
+                    "ordering": 4511,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 42,
+            "name": "Pålegg",
+            "parent": null,
+            "ordering": 5000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 44,
+                    "name": "Majones og tubepålegg",
+                    "parent": 42,
+                    "ordering": 5360,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 45,
+                    "name": "Kjøtt- og kyllingpålegg",
+                    "parent": 42,
+                    "ordering": 5020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 46,
+                    "name": "Syltetøy",
+                    "parent": 42,
+                    "ordering": 5340,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 47,
+                    "name": "Salatpålegg",
+                    "parent": 42,
+                    "ordering": 5030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 97,
+                    "name": "Fiskepålegg",
+                    "parent": 42,
+                    "ordering": 5320,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 122,
+                    "name": "Leverpostei",
+                    "parent": 42,
+                    "ordering": 5025,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 235,
+                    "name": "Spekemat og salami",
+                    "parent": 42,
+                    "ordering": 5022,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 392,
+                    "name": "Honning og søtpålegg",
+                    "parent": 42,
+                    "ordering": 5350,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 411,
+            "name": "Grill",
+            "parent": null,
+            "ordering": 5700,
+            "description": "",
+            "is_new": true,
+            "children": [
+                {
+                    "id": 414,
+                    "name": "Pølser på grillen",
+                    "parent": 411,
+                    "ordering": 5760,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 413,
+                    "name": "Hamburger på grillen",
+                    "parent": 411,
+                    "ordering": 5755,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 419,
+                    "name": "Vegetar på grillen",
+                    "parent": 411,
+                    "ordering": 5785,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 412,
+                    "name": "Kjøtt og kylling på grillen",
+                    "parent": 411,
+                    "ordering": 5750,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 416,
+                    "name": "Marinader og rubs",
+                    "parent": 411,
+                    "ordering": 5770,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 417,
+                    "name": "Ketchup, dressing og tilbehør",
+                    "parent": 411,
+                    "ordering": 5775,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 418,
+                    "name": "Grønnsaker på grillen",
+                    "parent": 411,
+                    "ordering": 5780,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 415,
+                    "name": "Hamburgerbrød og pølsebrød",
+                    "parent": 411,
+                    "ordering": 5765,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 420,
+                    "name": "Grillutstyr",
+                    "parent": 411,
+                    "ordering": 5790,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 32,
+            "name": "Middager og tilbehør",
+            "parent": null,
+            "ordering": 6000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 8,
+                    "name": "Ferdigsauser",
+                    "parent": 32,
+                    "ordering": 6005,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 11,
+                    "name": "Ris og gryn",
+                    "parent": 32,
+                    "ordering": 6030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 33,
+                    "name": "Ferdige middagsretter",
+                    "parent": 32,
+                    "ordering": 6002,
+                    "description": "",
+                    "is_new": true,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 92,
+                    "name": "Middags-kit og gryteretter",
+                    "parent": 32,
+                    "ordering": 6010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 96,
+                    "name": "Middagstilbehør",
+                    "parent": 32,
+                    "ordering": 6040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 119,
+                    "name": "Supper",
+                    "parent": 32,
+                    "ordering": 6003,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 125,
+                    "name": "Posesauser",
+                    "parent": 32,
+                    "ordering": 6004,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 313,
+                    "name": "Pasta og nudler",
+                    "parent": 32,
+                    "ordering": 6035,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 410,
+                    "name": "Middagsbaser",
+                    "parent": 32,
+                    "ordering": 6006,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 424,
+            "name": "Pizza og taco",
+            "parent": null,
+            "ordering": 6200,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 113,
+                    "name": "Taco",
+                    "parent": 424,
+                    "ordering": 6235,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 184,
+                    "name": "Fryst pizza",
+                    "parent": 424,
+                    "ordering": 6220,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 426,
+                    "name": "Hjemmelaget pizza",
+                    "parent": 424,
+                    "ordering": 6230,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 427,
+                    "name": "Snacking",
+                    "parent": 424,
+                    "ordering": 6240,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 60,
+            "name": "Drikkevarer",
+            "parent": null,
+            "ordering": 7000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 12,
+                    "name": "Kaffe",
+                    "parent": 60,
+                    "ordering": 7050,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 61,
+                    "name": "Brus",
+                    "parent": 60,
+                    "ordering": 7020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 63,
+                    "name": "Vann og mineralvann",
+                    "parent": 60,
+                    "ordering": 7010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 65,
+                    "name": "Juice",
+                    "parent": 60,
+                    "ordering": 7030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 66,
+                    "name": "Saft",
+                    "parent": 60,
+                    "ordering": 7040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 187,
+                    "name": "Te",
+                    "parent": 60,
+                    "ordering": 7060,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 345,
+                    "name": "Energidrikk",
+                    "parent": 60,
+                    "ordering": 7100,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 359,
+                    "name": "Smoothie",
+                    "parent": 60,
+                    "ordering": 7035,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 405,
+                    "name": "Iste",
+                    "parent": 60,
+                    "ordering": 7045,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 406,
+                    "name": "Kakao og sjokoladepulver",
+                    "parent": 60,
+                    "ordering": 7070,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 338,
+            "name": "Øl, cider og rusbrus",
+            "parent": null,
+            "ordering": 7500,
+            "description": "Salg av alkohol til personer under 18 år er ikke tillatt. Legitimasjon må fremvises ved utlevering. Alkohol blir ikke utlevert etter kl. 20.",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 339,
+                    "name": "Øl",
+                    "parent": 338,
+                    "ordering": 7510,
+                    "description": "Salg av alkohol til personer under 18 år er ikke tillatt. Legitimasjon må fremvises ved utlevering. Alkohol blir ikke utlevert etter kl. 20.",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 340,
+                    "name": "Spesialøl og import",
+                    "parent": 338,
+                    "ordering": 7520,
+                    "description": "Salg av alkohol til personer under 18 år er ikke tillatt. Legitimasjon må fremvises ved utlevering. Alkohol blir ikke utlevert etter kl. 20.",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 341,
+                    "name": "Cider og rusbrus",
+                    "parent": 338,
+                    "ordering": 7530,
+                    "description": "Salg av alkohol til personer under 18 år er ikke tillatt. Legitimasjon må fremvises ved utlevering. Alkohol blir ikke utlevert etter kl. 20.",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 343,
+                    "name": "Blandevann",
+                    "parent": 338,
+                    "ordering": 7550,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 344,
+                    "name": "Alkoholfritt",
+                    "parent": 338,
+                    "ordering": 7525,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 37,
+            "name": "Olje og krydder",
+            "parent": null,
+            "ordering": 8000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 38,
+                    "name": "Oljer og dressinger",
+                    "parent": 37,
+                    "ordering": 8010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 39,
+                    "name": "Krydder",
+                    "parent": 37,
+                    "ordering": 8020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 40,
+                    "name": "Ketchup og sennep",
+                    "parent": 37,
+                    "ordering": 8030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 98,
+                    "name": "Buljong og fond",
+                    "parent": 37,
+                    "ordering": 8040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 316,
+                    "name": "Kryddermiks",
+                    "parent": 37,
+                    "ordering": 8050,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 15,
+            "name": "Mel og bakeingredienser",
+            "parent": null,
+            "ordering": 9000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 16,
+                    "name": "Mel og sukker",
+                    "parent": 15,
+                    "ordering": 9020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 18,
+                    "name": "Baketilbehør",
+                    "parent": 15,
+                    "ordering": 9080,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 19,
+                    "name": "Ferdigmikser",
+                    "parent": 15,
+                    "ordering": 9070,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 408,
+            "name": "Is og desserter",
+            "parent": null,
+            "ordering": 9200,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 10,
+                    "name": "Dessert",
+                    "parent": 408,
+                    "ordering": 9270,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 56,
+                    "name": "Is i boks",
+                    "parent": 408,
+                    "ordering": 9250,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 409,
+                    "name": "Porsjonsis",
+                    "parent": 408,
+                    "ordering": 9260,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 348,
+            "name": "Kaker, kjeks og desserter",
+            "parent": null,
+            "ordering": 9500,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 110,
+                    "name": "Kjeks",
+                    "parent": 348,
+                    "ordering": 9515,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 346,
+                    "name": "Ferske kaker",
+                    "parent": 348,
+                    "ordering": 9520,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 349,
+                    "name": "Småkaker",
+                    "parent": 348,
+                    "ordering": 9530,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 350,
+                    "name": "Boller og lefser",
+                    "parent": 348,
+                    "ordering": 9560,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 67,
+            "name": "Snacks og godteri",
+            "parent": null,
+            "ordering": 10000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 68,
+                    "name": "Potetchips og snacks",
+                    "parent": 67,
+                    "ordering": 10010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 69,
+                    "name": "Sjokolade",
+                    "parent": 67,
+                    "ordering": 10020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 70,
+                    "name": "Godteri",
+                    "parent": 67,
+                    "ordering": 10030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 71,
+                    "name": "Nøtter",
+                    "parent": 67,
+                    "ordering": 10040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 100,
+                    "name": "Tyggis og pastiller",
+                    "parent": 67,
+                    "ordering": 10050,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 73,
+            "name": "Barneprodukter",
+            "parent": null,
+            "ordering": 11000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 74,
+                    "name": "Bleier",
+                    "parent": 73,
+                    "ordering": 11010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 75,
+                    "name": "Grøt",
+                    "parent": 73,
+                    "ordering": 11020,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 77,
+                    "name": "Våtservietter og såpe",
+                    "parent": 73,
+                    "ordering": 11030,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 78,
+                    "name": "Smokker og tåteflasker",
+                    "parent": 73,
+                    "ordering": 11040,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 137,
+                    "name": "Morsmelkerstatning",
+                    "parent": 73,
+                    "ordering": 11025,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 157,
+                    "name": "Smoothie, yoghurt og mellommåltid",
+                    "parent": 73,
+                    "ordering": 11023,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 160,
+                    "name": "Middagsglass",
+                    "parent": 73,
+                    "ordering": 11022,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 277,
+                    "name": "Bursdag",
+                    "parent": 73,
+                    "ordering": 11050,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 335,
+                    "name": "Aktiviteter for barn",
+                    "parent": 73,
+                    "ordering": 11060,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 79,
+            "name": "Shampo, såpe og krem",
+            "parent": null,
+            "ordering": 12000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 80,
+                    "name": "Såpe",
+                    "parent": 79,
+                    "ordering": 12010,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 107,
+                    "name": "Shampo og hårprodukter",
+                    "parent": 79,
+                    "ordering": 12015,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 154,
+                    "name": "Krem",
+                    "parent": 79,
+                    "ordering": 12100,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 380,
+                    "name": "Solkrem",
+                    "parent": 79,
+                    "ordering": 12110,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 381,
+                    "name": "Barnesåpe og babyolje",
+                    "parent": 79,
+                    "ordering": 12105,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 394,
+            "name": "Trening",
+            "parent": null,
+            "ordering": 12610,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 396,
+                    "name": "Sportsdrikke",
+                    "parent": 394,
+                    "ordering": 12620,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 395,
+                    "name": "Proteinpulver og styrke",
+                    "parent": 394,
+                    "ordering": 12615,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 397,
+                    "name": "Måltidserstatter",
+                    "parent": 394,
+                    "ordering": 12625,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 398,
+                    "name": "Proteinsnacks og vitamingodis",
+                    "parent": 394,
+                    "ordering": 12630,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 399,
+                    "name": "Kosttilskudd",
+                    "parent": 394,
+                    "ordering": 12635,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 400,
+                    "name": "Vektkontroll",
+                    "parent": 394,
+                    "ordering": 12640,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 373,
+            "name": "Hygieneartikler",
+            "parent": null,
+            "ordering": 12650,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 374,
+                    "name": "Tannpleie",
+                    "parent": 373,
+                    "ordering": 12655,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 375,
+                    "name": "Deodorant",
+                    "parent": 373,
+                    "ordering": 12660,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 376,
+                    "name": "Bind og tamponger",
+                    "parent": 373,
+                    "ordering": 12665,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 377,
+                    "name": "Bomull og ansiktsrens",
+                    "parent": 373,
+                    "ordering": 12670,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 378,
+                    "name": "Barbering",
+                    "parent": 373,
+                    "ordering": 12675,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 379,
+                    "name": "Prevensjon",
+                    "parent": 373,
+                    "ordering": 12680,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 365,
+            "name": "Legemidler og helsekost",
+            "parent": null,
+            "ordering": 12700,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 366,
+                    "name": "Legemidler",
+                    "parent": 365,
+                    "ordering": 12710,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 367,
+                    "name": "Plaster",
+                    "parent": 365,
+                    "ordering": 12715,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 369,
+                    "name": "Helsekost",
+                    "parent": 365,
+                    "ordering": 12720,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 370,
+                    "name": "Proteinbar og müslibar",
+                    "parent": 365,
+                    "ordering": 12725,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 372,
+                    "name": "Nikotinprodukter",
+                    "parent": 365,
+                    "ordering": 12730,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 163,
+            "name": "Tørkepapir og vaskemidler",
+            "parent": null,
+            "ordering": 12800,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 86,
+                    "name": "Klesvask",
+                    "parent": 163,
+                    "ordering": 12815,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 87,
+                    "name": "Vaskemidler",
+                    "parent": 163,
+                    "ordering": 12825,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 93,
+                    "name": "Toalettpapir og tørkerull",
+                    "parent": 163,
+                    "ordering": 12810,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 166,
+                    "name": "Oppvask",
+                    "parent": 163,
+                    "ordering": 12820,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 169,
+                    "name": "Kluter, svamper og hansker",
+                    "parent": 163,
+                    "ordering": 12830,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 331,
+            "name": "Magasiner og bøker",
+            "parent": null,
+            "ordering": 12900,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 334,
+                    "name": "Magasiner",
+                    "parent": 331,
+                    "ordering": 12910,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 362,
+                    "name": "Bøker",
+                    "parent": 331,
+                    "ordering": 12915,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 384,
+                    "name": "Barnebøker",
+                    "parent": 331,
+                    "ordering": 12914,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 85,
+            "name": "Husholdning og tekstil",
+            "parent": null,
+            "ordering": 13000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 88,
+                    "name": "Poser og folie",
+                    "parent": 85,
+                    "ordering": 13543,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 90,
+                    "name": "Diverse husholdning",
+                    "parent": 85,
+                    "ordering": 13690,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 139,
+                    "name": "Undertøy",
+                    "parent": 85,
+                    "ordering": 13545,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 172,
+                    "name": "Lys",
+                    "parent": 85,
+                    "ordering": 13550,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 175,
+                    "name": "Engangs og Servietter",
+                    "parent": 85,
+                    "ordering": 13555,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 178,
+                    "name": "Kjøkkenredskap",
+                    "parent": 85,
+                    "ordering": 13560,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 181,
+                    "name": "Kontor",
+                    "parent": 85,
+                    "ordering": 13565,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 371,
+                    "name": "Insektmiddel",
+                    "parent": 85,
+                    "ordering": 13570,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 385,
+                    "name": "Batterier",
+                    "parent": 85,
+                    "ordering": 13558,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 128,
+            "name": "Dyremat",
+            "parent": null,
+            "ordering": 13900,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 131,
+                    "name": "Hundemat",
+                    "parent": 128,
+                    "ordering": 13940,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 134,
+                    "name": "Kattemat",
+                    "parent": 128,
+                    "ordering": 13950,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 328,
+                    "name": "Fuglemat",
+                    "parent": 128,
+                    "ordering": 13960,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 386,
+                    "name": "Gnagermat",
+                    "parent": 128,
+                    "ordering": 13970,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        },
+        {
+            "id": 101,
+            "name": "Snus og tobakk",
+            "parent": null,
+            "ordering": 14000,
+            "description": "",
+            "is_new": false,
+            "children": [
+                {
+                    "id": 102,
+                    "name": "Snus",
+                    "parent": 101,
+                    "ordering": 14710,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 103,
+                    "name": "Sigaretter",
+                    "parent": 101,
+                    "ordering": 14700,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 104,
+                    "name": "Lightere og fyrstikker",
+                    "parent": 101,
+                    "ordering": 14690,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 363,
+                    "name": "Sigarer og Sigarillos",
+                    "parent": 101,
+                    "ordering": 14720,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 364,
+                    "name": "Rulletobakk",
+                    "parent": 101,
+                    "ordering": 14715,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                },
+                {
+                    "id": 382,
+                    "name": "Skråtobakk",
+                    "parent": 101,
+                    "ordering": 14725,
+                    "description": "",
+                    "is_new": false,
+                    "children": [],
+                    "campaign_banners": []
+                }
+            ],
+            "campaign_banners": []
+        }
     ]
+
 }

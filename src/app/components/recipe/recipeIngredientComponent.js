@@ -39,10 +39,17 @@ export default class IngredientComponent extends React.PureComponent {
             name,
             inShoppingList,
             inFridge,
+            amount,
+            mesure
         } = this.props.ingredient
         return <TableRow className="IngredientRecipeListComponent">
             <TableCell component="th" scope="row">
                 {name}
+            </TableCell>
+            <TableCell>
+                <Typography>
+                    {amount + "\xa0" + mesure}
+                </Typography>
             </TableCell>
             <TableCell>
                 <Checkbox 
@@ -51,7 +58,7 @@ export default class IngredientComponent extends React.PureComponent {
             </TableCell>
             <TableCell>
                 <Typography>
-                    {this.props.ingredient.inFridge ? "in fridge" : null}
+                    {this.props.ingredient.inFridge ? "ja" : null}
                 </Typography>
             </TableCell>
         </TableRow>;

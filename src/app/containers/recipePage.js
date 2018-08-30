@@ -97,7 +97,7 @@ RecipePage.propTypes  = {
 
 function mapStateToProps(state) {
     return {
-        recipes: state.get('recipes')
+        recipes: state.get('recipes').get('recipes')
     };
 }
 

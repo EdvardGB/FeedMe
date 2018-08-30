@@ -61,8 +61,6 @@ class ShopList extends PureComponent {
         return (
             <div>
                 <h1>Shoppinglist</h1>
-                <NavLink to='/'>Recipes</NavLink>
-                <NavLink to='/fridge'>Fridge</NavLink>
                 <Table>
                     <TableHead>
                         <TableRow>

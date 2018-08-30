@@ -37,8 +37,6 @@ class Fridge extends Component {
         return (
             <div>
                 <h1>Fridge</h1>
-                <NavLink to='/shoplist'>Shoplist</NavLink>
-                <NavLink to='/'>Recipes</NavLink>
                 <Table>
                     <TableHead>
                         <TableRow>
