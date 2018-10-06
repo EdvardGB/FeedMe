@@ -17,40 +17,28 @@ export default class SearchComponent extends Component {
             value: "",
             suggestions: [],
             suggestionBase: [],
-            APISuggestions: [],
             selected: null
         }
     }
 
-    createSuggestions(){
-        const suggestionBase = this.state.APISuggestions.map(suggestion => suggestion.name + ", " + suggestion.brand )
-        this.setState({
-            suggestionBase: suggestionBase
-        }) 
-        return suggestionBase
-    }
 
     getSuggestionBase(value){
         return new Promise((resolve, reject) => {
-            if (this.state.APISuggestions.length == 0){
+            if (this.state.suggestionBase.length == 0){
                 console.log("fetching from API")
                 API.searchIngredientAPI(value)
-                .then(response => 
+                .then(response =>{
                     response.json().then(data => { 
                         this.setState({
-                            APISuggestions: data.products
+                            suggestionBase: data.products
                         })
+                        resolve(data.products)
                     })
-                )
-                .then(this.createSuggestions.bind(this))
-                .then(suggestionBase => resolve(suggestionBase))
+                })
             } else {
                 resolve(this.state.suggestionBase)
             }
-            
         })
-
-
     };
 
     getSuggestions(value){
@@ -58,16 +46,14 @@ export default class SearchComponent extends Component {
         const inputValue = deburr(value.trim()).toLowerCase();
         const inputLength = inputValue.length;
         let count = 0;
-        let maxCount = 5;
+        let maxCount = 6;
         return inputLength === 0
             ? this.state.suggestions
             : new Promise((resolve, reject) => {
                 this.getSuggestionBase(value).then(suggestionBase => {
-                    
-                    
                     let sugestions = suggestionBase.filter(suggestion => {
                         const keep =
-                            count < maxCount && suggestion.slice(0, inputLength).toLowerCase() === inputValue;
+                            count < maxCount && suggestion.name.slice(0, inputLength).toLowerCase() === inputValue;
                         if (keep) {
                             count += 1;
                         }
@@ -77,6 +63,8 @@ export default class SearchComponent extends Component {
                         sugestions: sugestions
                     })
                     resolve(sugestions)
+                    
+                   resolve([])
                     
                 })
             });
@@ -108,7 +96,6 @@ export default class SearchComponent extends Component {
 
     onSuggestionsClearRequested(){
         this.setState({
-            APISuggestions: [],
             suggestionBase: [],
             suggestions: [],
         });
@@ -116,7 +103,7 @@ export default class SearchComponent extends Component {
 
     renderSuggestion(suggestion) {
         return <Paper square>
-            {suggestion}
+            {suggestion.name}
         </Paper>
     }
 
@@ -124,6 +111,7 @@ export default class SearchComponent extends Component {
         this.setState({
             selected: suggestion
         })
+        this.props.select(suggestion)
         return ""
     }
 

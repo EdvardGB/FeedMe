@@ -18,6 +18,7 @@ import IngredientComponent from '../components/shoplist/shoplistIngredientCompon
 
 import * as shopListActions from '../actions/shopListActions';
 import * as fridgeActions from '../actions/fridgeActions';
+import Ingredient from '../interfaces/ingredient';
 
 class ShopList extends PureComponent {
 
@@ -62,12 +63,15 @@ class ShopList extends PureComponent {
         : null
     }
 
+    ingredienSearchSelect(suggestion){
+        this.props.addIngToShopList(new Ingredient(suggestion))
+    }
 
     render () {
         return (
             <div>
                 <h1>Shoppinglist</h1>
-                <div><Search /></div>
+                <div><Search select={this.ingredienSearchSelect.bind(this)}/></div>
                 <Table>
                     <TableHead>
                         <TableRow>
@@ -95,7 +99,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         removeIngShopList: (arg) => {shopListActions.remove(dispatch, arg)},
-        addIngToFridge: (arg) => {fridgeActions.add(dispatch, arg)}
+        addIngToFridge: (arg) => {fridgeActions.add(dispatch, arg)},
+        addIngToShopList: (arg) => {shopListActions.add(dispatch, arg)},
     };
 }
 

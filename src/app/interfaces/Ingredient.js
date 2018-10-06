@@ -1,10 +1,14 @@
 export default class Ingredient {
     constructor(data){
-        const product = data.product
-        this.alternativeProducts = this.aleternatives(product['alternative_products']);
-        this.price = product['gross_price'];
+        const product = data.product ? data.product : data.name ? data : null
+        this.alternativeProducts = product.alternativeProducts ? this.aleternatives(product['alternative_products']) : [];
+        this.price = product.price || product["gross_price"]
         this.name = product.name;
-        this.thumbnail = product.images ? product.images.thumbnail : null 
+        this.thumbnail = product.images ? 
+            product.images['0'] ? 
+                product.images['0'].thumbnail 
+                : product.images.thumbnail
+            :  null 
         this.id = product.id
 
         this.mesure = product['unit_price_quantity_abbreviation']
