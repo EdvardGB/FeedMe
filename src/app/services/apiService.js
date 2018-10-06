@@ -16,10 +16,18 @@ export function getAPI(spesificUrl){
         headers : new Headers({
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'X-Client-Token': token
+            'X-Client-Token': token,
         })
     })
 }
 
-   
+export function searchIngredientAPI(string){
+    return fetch(url +"search/?q=" + string, { 
+        headers : new Headers({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-Client-Token': token,
+        })
+    })
+}
 

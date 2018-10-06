@@ -18,6 +18,7 @@
     "react": "^16.4.1",
     "react-addons-create-fragment": "^15.4.2",
     "react-addons-transition-group": "^15.4.2",
+    "react-autosuggest": "^9.4.2",
     "react-dom": "^16.4.1",
     "react-form": "^3.5.6",
     "react-redux": "^5.0.7",

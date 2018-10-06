@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
-
+import Search from '../components/searchComponent';
 
 import Table from '@material-ui/core/Table'; 
 import TableBody from '@material-ui/core/TableBody'; 
@@ -10,6 +10,9 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow'; 
 import TableCell from '@material-ui/core/TableCell';  
 import Checkbox from "@material-ui/core/Checkbox";
+import NativeSelect from '@material-ui/core/NativeSelect';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 import IngredientComponent from '../components/shoplist/shoplistIngredientComponent';
 
@@ -20,6 +23,8 @@ class ShopList extends PureComponent {
 
     constructor(props) {
         super(props); 
+        this.state = {
+        }
     }
 
     onChange(event, checked){
@@ -56,11 +61,13 @@ class ShopList extends PureComponent {
             </TableBody>
         : null
     }
-    
+
+
     render () {
         return (
             <div>
                 <h1>Shoppinglist</h1>
+                <div><Search /></div>
                 <Table>
                     <TableHead>
                         <TableRow>

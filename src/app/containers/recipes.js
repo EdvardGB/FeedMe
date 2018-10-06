@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom'
 import Search from '../components/searchComponent';
 import RecipeComponent from '../components/recipe/recipeComponent';
 
-import Recipe from '../interfaces/recipe'; 
+
 
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
@@ -18,7 +18,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import * as recipeActions from '../actions/recipeAction';
 import * as shopListActions from '../actions/shopListActions';
-import * as APIService from '../services/apiService';
+
 
 class Recipes extends PureComponent  {
 
@@ -26,8 +26,10 @@ class Recipes extends PureComponent  {
         super(props); 
         this.state = {
             value: "",
-            selectedCategory: "",
-            selectedValue:""
+            selectedCategory: {
+                id: 1,
+                title: "Få ingredienser"},
+            selectedValue: 1
         }
     }
 
@@ -37,35 +39,24 @@ class Recipes extends PureComponent  {
         this.setState({value: value})
     }
 
-    renderCetegories(){
+    renderCategories(){
         return this.props.categories.map(category => {
-            return <MenuItem key={category.id} object={category} value={category.id}>{category.title}</MenuItem>
+            return <MenuItem key={category.id} value={category.id}>{category.title}</MenuItem>
         })
     }
 
-    handleChange(event){
-
-        this.setState({selectedCategory: event.target.object, selectedValue: event.target.value})  //this.props.categories.filter(category => category.id === event.target.value).get(0)})
-        console.log(this.props.categories.filter(category => category.id === event.target.value).get(0))
-        APIService.getAPI('recipe-tags/' + event.target.value).then(response => 
-            response.json().then(data => { 
-                this.props.addRecipeDummies(data.recipes.map(recipe => new Recipe(recipe)))
-                // let recipes = []
-                // Promise.all(
-                //     data.recipes.map((recipeDummy) => 
-                //         APIService.getAPI('recipes/'+ recipeDummy.id).then(response => 
-                //             response.json().then((recipe) => console.log(recipes) ||
-                //                 recipes.push(new Recipe(recipe))
-                //         ))
-                //     )
-                // ).then(() => {
-                //     console.log("hello")
-                //     this.props.addRecipes(recipes)
-                // })
-            })
-        )
+    handleCategoryChange(event){
+        let selectedCategory = this.props.categories.filter(c => c.id == event.target.value).get(0)
+        
+        this.setState({
+            selectedCategory: selectedCategory, 
+            selectedValue: selectedCategory.id
+        })  //this.props.categories.filter(category => category.id === event.target.value).get(0)})
+        this.props.getCategory(selectedCategory, this.props.recipesByCategory)
+   
     }
     render () {
+        console.log(this.props.recipesByCategory[this.state.selectedCategory.title])
         return (
             <div>
                 <h1>Oppskrifter</h1>
@@ -76,15 +67,9 @@ class Recipes extends PureComponent  {
                         <InputLabel htmlFor="age-simple">Kategori</InputLabel>
                         <Select
                             value={this.state.selectedValue}
-                            onChange={this.handleChange.bind(this)}
-                            inputProps={{
-                            name: 'category'
-                            }}
+                            onChange={this.handleCategoryChange.bind(this)}
                         >
-                            <MenuItem value="">
-                            <em>None</em>
-                            </MenuItem>
-                            {this.renderCetegories()}
+                            {this.renderCategories()}
                         </Select>
                     </FormControl>
                 </form>
@@ -105,15 +90,16 @@ class Recipes extends PureComponent  {
 Recipes.propTypes  = {
     recipes: PropTypes.object,
     fridge: PropTypes.object,
-    categories: PropTypes.object
+    categories: PropTypes.object,
+    recipesByCategory: PropTypes.object,
 }
 
 function mapStateToProps(state) {
     return {
       recipes: state.get('recipes').get('recipes'),
-      fridge: state.get('fridge'),
       categories: state.get('recipes').get('categories'),
-      recipeDummies: state.get('recipes').get('recipeDummies')
+      recipesByCategory: state.get('recipes').get('recipesByCategory'),
+      fridge: state.get('fridge'),
     };
 }
 
@@ -121,9 +107,10 @@ function mapDispatchToProps(dispatch) {
     return {
         addIngToShopList: (arg) => {shopListActions.add(dispatch, arg)},
         removeIngToShopList: (arg) => {shopListActions.remove(dispatch, arg)},
-        addRecipe: (arg) => {recipeActions.addRecipe(dispatch, arg)},
-        addRecipes: (arg) => {recipeActions.addRecipes(dispatch, arg)},
-        addRecipeDummies: (arg) => {recipeActions.addRecipeDummies(dispatch,arg)}
+        getCategory: (arg, res) => {recipeActions.getCategory(dispatch, arg, res)},
+        //addRecipe: (arg) => {recipeActions.addRecipe(dispatch, arg)},
+        //addRecipes: (arg) => {recipeActions.addRecipes(dispatch, arg)},
+        //addRecipeDummies: (arg) => {recipeActions.addRecipeDummies(dispatch,arg)}
         
     };
 }
