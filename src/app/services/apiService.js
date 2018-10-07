@@ -21,7 +21,7 @@ export function getAPI(spesificUrl){
     })
 }
 
-export function searchIngredientAPI(string){
+export function ingredientAPISearch(string){
     return fetch(url +"search/?q=" + string, { 
         headers : new Headers({
             'Accept': 'application/json',
@@ -31,3 +31,12 @@ export function searchIngredientAPI(string){
     })
 }
 
+export function recipetAPISearch(string){
+    return fetch(url +"search/recipes/?q=" + string, { 
+        headers : new Headers({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-Client-Token': token,
+        })
+    })
+}

@@ -37,6 +37,14 @@ export default class RecipeComponent extends React.PureComponent {
         };
     }
 
+    getTime(){
+        let { recipe } = this.props
+        if (recipe.cookingDuration){
+            return recipe.cookingDuration
+        }
+        return "tid: NaN"
+    }
+
     getPrice(){
         let { recipe } = this.props
         let price = 0
@@ -121,7 +129,12 @@ export default class RecipeComponent extends React.PureComponent {
                             </div>
                             }
                             title={recipe.title}
-                            subheader={this.getRelativeIngredients() + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" + this.getPrice()}
+                            subheader={this.getRelativeIngredients() 
+                                + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" 
+                                + this.getPrice()
+                                + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0"
+                                + this.getTime()
+                            }
                             
                         />  
                     {/*

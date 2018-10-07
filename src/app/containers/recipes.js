@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
 
+// API
+import * as API from '../services/apiService';
 
 import Search from '../components/searchComponent';
 import RecipeComponent from '../components/recipe/recipeComponent';
@@ -18,6 +20,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import * as recipeActions from '../actions/recipeAction';
 import * as shopListActions from '../actions/shopListActions';
+import Recipe from '../interfaces/recipe';
 
 
 class Recipes extends PureComponent  {
@@ -54,6 +57,21 @@ class Recipes extends PureComponent  {
         })  //this.props.categories.filter(category => category.id === event.target.value).get(0)})
         this.props.getCategory(selectedCategory, this.props.recipesByCategory)
    
+    
+    }
+
+    handleData(data){
+        console.log(data)
+        return data.results
+    }
+
+    recipeSearchSelect(suggestion){
+        console.log(suggestion)
+        if(suggestion.id == "new"){
+            console.log("creating new ingredient")
+        } else {
+            this.props.addRecipe(new Recipe(suggestion))
+        }
     }
     render () {
         console.log(this.props.recipesByCategory[this.state.selectedCategory.title])
@@ -61,7 +79,14 @@ class Recipes extends PureComponent  {
             <div>
                 <h1>Oppskrifter</h1>
 
-                <div><Search value={this.state.value} onChange={this.searchOnChange.bind(this)}/></div>
+                <div>
+                    <Search 
+                        select={this.recipeSearchSelect.bind(this)}
+                        search={API.recipetAPISearch}
+                        handleData={this.handleData.bind(this)}
+                        filter ={'title'}
+                    />
+                </div>
                 <form autoComplete="off">
                     <FormControl >
                         <InputLabel htmlFor="age-simple">Kategori</InputLabel>
@@ -108,7 +133,7 @@ function mapDispatchToProps(dispatch) {
         addIngToShopList: (arg) => {shopListActions.add(dispatch, arg)},
         removeIngToShopList: (arg) => {shopListActions.remove(dispatch, arg)},
         getCategory: (arg, res) => {recipeActions.getCategory(dispatch, arg, res)},
-        //addRecipe: (arg) => {recipeActions.addRecipe(dispatch, arg)},
+        addRecipe: (arg) => {recipeActions.addRecipe(dispatch, arg)},
         //addRecipes: (arg) => {recipeActions.addRecipes(dispatch, arg)},
         //addRecipeDummies: (arg) => {recipeActions.addRecipeDummies(dispatch,arg)}
         

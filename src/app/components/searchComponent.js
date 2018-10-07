@@ -6,9 +6,6 @@ import Paper from '@material-ui/core/Paper';
 import deburr from 'lodash/deburr';
 
 
-// API
-import * as API from '../services/apiService';
-
 export default class SearchComponent extends Component {
     
     constructor(props) {
@@ -21,18 +18,17 @@ export default class SearchComponent extends Component {
         }
     }
 
-
     getSuggestionBase(value){
         return new Promise((resolve, reject) => {
             if (this.state.suggestionBase.length == 0){
-                console.log("fetching from API")
-                API.searchIngredientAPI(value)
+                this.props.search(value)
                 .then(response =>{
-                    response.json().then(data => { 
+                    response.json().then(data => {
+                        data = this.props.handleData(data) 
                         this.setState({
-                            suggestionBase: data.products
+                            suggestionBase: data
                         })
-                        resolve(data.products)
+                        resolve(data)
                     })
                 })
             } else {
@@ -52,8 +48,9 @@ export default class SearchComponent extends Component {
             : new Promise((resolve, reject) => {
                 this.getSuggestionBase(value).then(suggestionBase => {
                     let sugestions = suggestionBase.filter(suggestion => {
+                        const filter = this.props.filter
                         const keep =
-                            count < maxCount && suggestion.name.slice(0, inputLength).toLowerCase() === inputValue;
+                            count < maxCount && suggestion[filter].slice(0, inputLength).toLowerCase() === inputValue;
                         if (keep) {
                             count += 1;
                         }
@@ -87,11 +84,13 @@ export default class SearchComponent extends Component {
 
     onSuggestionsFetchRequested({ value }){
         this.getSuggestions(value)
-        .then(suggestions =>
+        .then(suggestions => {
+            suggestions.push({[this.props.filter]: "Add new...", id: "new"})
             this.setState({
                 suggestions: suggestions
             })
-        )
+
+        })
     };
 
     onSuggestionsClearRequested(){
@@ -103,7 +102,7 @@ export default class SearchComponent extends Component {
 
     renderSuggestion(suggestion) {
         return <Paper square>
-            {suggestion.name}
+            {suggestion[this.props.filter]}
         </Paper>
     }
 

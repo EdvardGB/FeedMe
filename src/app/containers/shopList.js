@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
 import Search from '../components/searchComponent';
 
+// API
+import * as API from '../services/apiService';
+
 import Table from '@material-ui/core/Table'; 
 import TableBody from '@material-ui/core/TableBody'; 
 import TableHead from '@material-ui/core/TableHead';
@@ -63,15 +66,32 @@ class ShopList extends PureComponent {
         : null
     }
 
+    handleData(data){
+        return data.products
+    }
+    
+
     ingredienSearchSelect(suggestion){
-        this.props.addIngToShopList(new Ingredient(suggestion))
+        console.log(suggestion)
+        if(suggestion.id == "new"){
+            console.log("creating new ingredient")
+        } else {
+            this.props.addIngToShopList(new Ingredient(suggestion))
+        }
     }
 
     render () {
         return (
             <div>
                 <h1>Shoppinglist</h1>
-                <div><Search select={this.ingredienSearchSelect.bind(this)}/></div>
+                <div>
+                    <Search 
+                        select={this.ingredienSearchSelect.bind(this)}
+                        search={API.ingredientAPISearch}
+                        handleData={this.handleData.bind(this)}
+                        filter ={'name'}
+                    />
+                </div>
                 <Table>
                     <TableHead>
                         <TableRow>
