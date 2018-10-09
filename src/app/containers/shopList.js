@@ -22,35 +22,72 @@ import IngredientComponent from '../components/shoplist/shoplistIngredientCompon
 import * as shopListActions from '../actions/shopListActions';
 import * as fridgeActions from '../actions/fridgeActions';
 import Ingredient from '../interfaces/ingredient';
+import { Button } from '@material-ui/core';
 
 class ShopList extends PureComponent {
 
     constructor(props) {
         super(props); 
         this.state = {
+            allChecked: this.props.ingredients.filter(ingredient => !ingredient.picked).size == 0,
+            value: 0
         }
     }
 
-    onChange(event, checked){
+    componentWillReceiveProps(props){
+        if(props != this.props){
+            this.setState({
+                value: this.state.value + 1
+            })
+        }
+    }
+
+    ingredientChange(){
+        this.setState({
+            allChecked: this.props.ingredients.filter(ingredient => !ingredient.picked).size == 0
+        })
+        console.log(this.props.ingredients.filter(ingredient => !ingredient.picked).size == 0)
+    }
+
+    addAllToFridge(checked){
         if(checked){
             this.props.ingredients.forEach(ingredient => {
-                if(ingredient.inShoppingList){
+                if(ingredient.picked){
                     this.props.removeIngShopList(ingredient)
                     this.props.addIngToFridge(ingredient)
                 }
             })
         }
     }
+    
+    selectAll(event){
+        if(event.target.checked){
+            this.props.ingredients.map(ingredient => {
+                if(!ingredient.picked){
+                    this.props.pickIngredient(ingredient)
+                }
+            })
+        } else {
+            this.props.ingredients.map(ingredient => {
+                if(ingredient.picked){
+                    this.props.pickIngredient(ingredient)
+                }
+            })
+        }
+        this.setState({
+            allChecked: !this.state.allChecked
+        })
+
+    }
 
     renderIngredients(){
         return this.props.ingredients.size > 0 ? <TableBody>
-                <TableRow className="IngredientRecipeListComponent">
-                    <TableCell component="th" scope="row">
-                        
-                    </TableCell>
+                <TableRow>
+                    <TableCell></TableCell>
                     <TableCell>
-                        <Checkbox  
-                            onChange={this.onChange.bind(this)}
+                        <Checkbox 
+                            onChange={this.selectAll.bind(this)}
+                            checked={this.state.allChecked}
                         />
                     </TableCell>
                 </TableRow>
@@ -60,6 +97,8 @@ class ShopList extends PureComponent {
                         ingredient={ingredient}
                         remove={this.props.removeIngShopList}
                         addToFridge={this.props.addIngToFridge} 
+                        change={this.ingredientChange.bind(this)}
+                        pick={this.props.pickIngredient}
                     />
                 )}
             </TableBody>
@@ -101,6 +140,9 @@ class ShopList extends PureComponent {
                     </TableHead>
                     {this.renderIngredients()}
                 </Table>
+                <Button
+                    onClick={this.addAllToFridge.bind(this)}
+                >Ferdig</Button>
             </div>
         )
     }
@@ -121,6 +163,7 @@ function mapDispatchToProps(dispatch) {
         removeIngShopList: (arg) => {shopListActions.remove(dispatch, arg)},
         addIngToFridge: (arg) => {fridgeActions.add(dispatch, arg)},
         addIngToShopList: (arg) => {shopListActions.add(dispatch, arg)},
+        pickIngredient: (arg) => {shopListActions.pick(dispatch, arg)}
     };
 }
 

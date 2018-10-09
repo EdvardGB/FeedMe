@@ -21,8 +21,18 @@ export function getAPI(spesificUrl){
     })
 }
 
+export function getAPIRecipe(id){
+    return fetch(url + "recipes/" + id, { 
+        headers : new Headers({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'X-Client-Token': token,
+        })
+    })
+}
+
 export function ingredientAPISearch(string){
-    return fetch(url +"search/?q=" + string, { 
+    return fetch(url + "search/?q=" + string, { 
         headers : new Headers({
             'Accept': 'application/json',
             'Content-Type': 'application/json',

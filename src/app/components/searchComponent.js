@@ -50,6 +50,7 @@ export default class SearchComponent extends Component {
                     let sugestions = suggestionBase.filter(suggestion => {
                         const filter = this.props.filter
                         const keep =
+                            // TODO. Implement search match on all words in string, not just the first
                             count < maxCount && suggestion[filter].slice(0, inputLength).toLowerCase() === inputValue;
                         if (keep) {
                             count += 1;
@@ -101,6 +102,9 @@ export default class SearchComponent extends Component {
     };
 
     renderSuggestion(suggestion) {
+        if(this.props.render){
+            return this.props.render(suggestion[this.props.filter])
+        }
         return <Paper square>
             {suggestion[this.props.filter]}
         </Paper>

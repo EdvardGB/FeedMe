@@ -19,12 +19,15 @@ export default class IngredientComponent extends React.PureComponent {
     }
 
     componentWillReceiveProps(props){
-        if(props.refresh != this.state.refresh){
-            this.setState({refresh: props.refresh, checked: this.props.ingredient.inShoppingList})
+        if(props != this.props){
+            this.setState({
+                refresh: props.refresh, 
+                checked: this.props.ingredient.inShoppingList
+            })
         }
     }
 
-    onChange(){
+    onChange(event){
         if(this.props.ingredient.inShoppingList){
             this.props.remove(this.props.ingredient)
             this.setState({checked: !this.state.checked})
@@ -32,6 +35,7 @@ export default class IngredientComponent extends React.PureComponent {
             this.props.add(this.props.ingredient)
             this.setState({checked: !this.state.checked})
         }
+        this.props.change()
     }
 
     render(){ 
@@ -52,14 +56,14 @@ export default class IngredientComponent extends React.PureComponent {
                 </Typography>
             </TableCell>
             <TableCell>
+                <Typography>
+                    {inFridge ? "ja" : 'nei'}
+                </Typography>
+            </TableCell>
+            <TableCell>
                 <Checkbox 
                     checked={this.state.checked}
                     onChange={this.onChange.bind(this)}/>
-            </TableCell>
-            <TableCell>
-                <Typography>
-                    {this.props.ingredient.inFridge ? "ja" : null}
-                </Typography>
             </TableCell>
         </TableRow>;
     }

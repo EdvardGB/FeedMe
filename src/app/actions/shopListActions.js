@@ -1,6 +1,7 @@
 export const actions = {
     add: "ADD_INGREDIENT_SHOPLIST",
-    remove: "REMOVE_INGREDIENT_SHOPLIST"
+    remove: "REMOVE_INGREDIENT_SHOPLIST",
+    pick: "PICK_INGREDIENT_SHOPLIST"
 }
 
 function addAction(arg){
@@ -15,6 +16,18 @@ function removeAction(arg){
         type: actions.remove,
         ingredient: arg
     }
+}
+
+function pickAction(arg){
+    return {
+        type: actions.pick,
+        ingredient: arg
+    }
+}
+
+
+export function pick(dispatch, arg){
+    dispatch(pickAction(arg))
 }
 
 

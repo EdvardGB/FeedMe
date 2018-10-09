@@ -70,6 +70,15 @@ export function getCategory(dispatch, arg, resByCat){
     //dispatch(addRecipeDummiesAction(arg))
 }
 
+export function getRecipe(dispatch, id){
+    APIService.getAPIRecipe(id).then(response => 
+        response.json().then(data => { 
+            console.log(data)
+        })
+    )
+}
+    
+
 
 export function addCategory(dispatch, arg){
     dispatch(addCategoryAction(arg))

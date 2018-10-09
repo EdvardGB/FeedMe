@@ -18,6 +18,14 @@ function remove(oldState, action){
     return state
 }
 
+function pick(oldState, action){
+    let state = oldState
+    action.ingredient.picked = !action.ingredient.picked
+    state = state.splice(state.indexOf(action.ingredient), 1, action.ingredient)
+    return state
+}
+
+
 
 export function shopListReducer(state = initialState, action) {
     switch (action.type) {
@@ -25,6 +33,8 @@ export function shopListReducer(state = initialState, action) {
             return remove(state,action)
         case shopListActions.actions.add:
             return add(state,action)
+        case shopListActions.actions.pick:
+            return pick(state,action)
       default:
         return state;
     }

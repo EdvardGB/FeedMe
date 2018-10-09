@@ -56,8 +56,6 @@ class Recipes extends PureComponent  {
             selectedValue: selectedCategory.id
         })  //this.props.categories.filter(category => category.id === event.target.value).get(0)})
         this.props.getCategory(selectedCategory, this.props.recipesByCategory)
-   
-    
     }
 
     handleData(data){
@@ -66,15 +64,19 @@ class Recipes extends PureComponent  {
     }
 
     recipeSearchSelect(suggestion){
-        console.log(suggestion)
         if(suggestion.id == "new"){
             console.log("creating new ingredient")
         } else {
-            this.props.addRecipe(new Recipe(suggestion))
+            this.props.getRecipe(suggestion.id)
+            //this.props.addRecipe(new Recipe(suggestion))
         }
     }
+
+    searchRender(suggestion){
+        return <div>{suggestion}</div>
+    }
+
     render () {
-        console.log(this.props.recipesByCategory[this.state.selectedCategory.title])
         return (
             <div>
                 <h1>Oppskrifter</h1>
@@ -84,7 +86,8 @@ class Recipes extends PureComponent  {
                         select={this.recipeSearchSelect.bind(this)}
                         search={API.recipetAPISearch}
                         handleData={this.handleData.bind(this)}
-                        filter ={'title'}
+                        filter={'title'}
+                        render={this.searchRender.bind(this)}
                     />
                 </div>
                 <form autoComplete="off">
@@ -134,6 +137,7 @@ function mapDispatchToProps(dispatch) {
         removeIngToShopList: (arg) => {shopListActions.remove(dispatch, arg)},
         getCategory: (arg, res) => {recipeActions.getCategory(dispatch, arg, res)},
         addRecipe: (arg) => {recipeActions.addRecipe(dispatch, arg)},
+        getRecipe: (arg) => {recipeActions.getRecipe(dispatch, arg)}
         //addRecipes: (arg) => {recipeActions.addRecipes(dispatch, arg)},
         //addRecipeDummies: (arg) => {recipeActions.addRecipeDummies(dispatch,arg)}
         

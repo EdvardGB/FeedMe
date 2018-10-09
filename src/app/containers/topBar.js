@@ -25,7 +25,7 @@ class TopBar extends Component {
                         <Typography variant="title" color="inherit" >
                             Feed Me
                         </Typography>
-                        <NavLink to='/' className="TopBarLink">
+                        <NavLink to='/tilbud' className="TopBarLink">
                             <Button color="inherit">Tilbud</Button>
                         </NavLink>
                         <NavLink to='/' className="TopBarLink">

@@ -16,6 +16,7 @@ export default class Ingredient {
         this.scale(parseFloat(data['portion_quantity']))
         this.inFridge = false;
         this.inShoppingList = false;
+        this.picked = false;
         
     }
 

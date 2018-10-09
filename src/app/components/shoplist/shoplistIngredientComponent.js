@@ -15,16 +15,32 @@ export default class IngredientComponent extends React.PureComponent {
         super(arg)
         this.state = {
             ingredient: this.props.ingredient,
-            refresh: this.props.refresh
+            refresh: this.props.refresh,
+            picked: this.props.ingredient.picked
+        }
+        console.log(this.state.picked)
+    }
+
+    componentWillReceiveProps(props){
+        if(props != this.props){
+            this.setState({
+                refresh: props.refresh, 
+                picked: this.props.ingredient.picked
+            })
         }
     }
 
     onChange(event, checked){
-        if(checked){
-            this.props.remove(this.props.ingredient)
-            this.props.addToFridge(this.props.ingredient)
-        }
-            
+
+        this.setState({
+            picked: checked
+        })
+        this.props.pick(this.props.ingredient)
+        this.props.change()       
+        
+        
+        //this.props.remove(this.props.ingredient)
+        //this.props.addToFridge(this.props.ingredient)
     }
 
     render(){ 
@@ -37,7 +53,9 @@ export default class IngredientComponent extends React.PureComponent {
             </TableCell>
             <TableCell>
                 <Checkbox 
-                    onChange={this.onChange.bind(this)}/>
+                    onChange={this.onChange.bind(this)}
+                    checked={this.state.picked}
+                />
             </TableCell>
 
         </TableRow>;

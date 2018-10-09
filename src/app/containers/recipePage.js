@@ -21,18 +21,48 @@ import IconButton from '@material-ui/core/IconButton';
 
 import IngredientComponent from '../components/recipe/recipeIngredientComponent';
 
+import * as shopListActions from '../actions/shopListActions';
+
 class RecipePage extends PureComponent  {
 
     constructor(props) {
         super(props); 
+        this.state = {
+            allChecked: this.props.recipe.ingredients.filter(ingredient => !ingredient.inShoppingList).length == 0
+        }
     }
 
+    ingredientChange(){
+        this.setState({
+            allChecked: this.props.recipe.ingredients.filter(ingredient => !ingredient.inShoppingList).length == 0
+        })
+        console.log(this.props.recipe.ingredients.filter(ingredient => !ingredient.inShoppingList))
+    }
+
+    selectAll(event){
+        if(event.target.checked){
+            this.props.recipe.ingredients.map(ingredient => {
+                if(!ingredient.inShoppingList){
+                    this.props.addIngToShopList(ingredient)
+                }
+            })
+        } else {
+            this.props.recipe.ingredients.map(ingredient => {
+                if(ingredient.inShoppingList){
+                    this.props.removeIngToShopList(ingredient)
+                }
+            })
+        }
+        this.setState({
+            allChecked: !this.state.allChecked
+        })
+
+    }
 
     render () {
         const { 
             recipe
         } = this.props;
-
         return (
             
             <div>
@@ -57,17 +87,25 @@ class RecipePage extends PureComponent  {
                                 <Table>
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell>Ingredients</TableCell>
-                                            <TableCell>Add to shoppinglist</TableCell>
+                                            <TableCell>Ingredienser</TableCell>
+                                            <TableCell>mengde</TableCell>
+                                            <TableCell>I kjøleskapet</TableCell>
+                                            <TableCell>Legg til handleliste</TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
                                         <TableRow className="IngredientRecipeListComponent">
-                                            <TableCell component="th" scope="row">
+                                            <TableCell>
+                                            </TableCell>
+                                            <TableCell>
+                                            </TableCell>
+                                            <TableCell>
                                                 
                                             </TableCell>
                                             <TableCell>
-                                                <Checkbox  
+                                                <Checkbox
+                                                    checked={this.state.allChecked}
+                                                    onClick={this.selectAll.bind(this)}  
                                                 />
                                             </TableCell>
                                         </TableRow>
@@ -75,8 +113,9 @@ class RecipePage extends PureComponent  {
                                             <IngredientComponent 
                                                 key={ingredient.id} 
                                                 ingredient={ingredient} 
-                                                add={this.props.addIngredient}
-                                                remove={this.props.removeIngredient}
+                                                add={this.props.addIngToShopList}
+                                                remove={this.props.removeIngToShopList}
+                                                change={this.ingredientChange.bind(this)}
                                             />
                                         
                                         )}
