@@ -74,11 +74,10 @@ class RecipePage extends PureComponent  {
         const { 
             recipe
         } = this.props;
-        console.log({props: this.props})
+
         return (
-            <div> hello 
-            {/*
-            <h1>{recipe.title}</h1>
+            <div>
+                <h1>{recipe.title}</h1>
                 <Card className="recipe">
                     <CardMedia
                             className="recipe-media"
@@ -135,7 +134,7 @@ class RecipePage extends PureComponent  {
                         </Table>
                     </CardContent>
 
-                </Card>*/}
+                </Card>
             </div>
 
         )

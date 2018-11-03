@@ -41,7 +41,7 @@ class Recipes extends PureComponent  {
 
     componentWillReceiveProps(props){
         const { renderRecipes, navigateRecipe } = this.state
-        console.log({recipesProps: props})
+        console.log({recipesProps: props, navigateREcipe: this.state})
         renderRecipes.map(recipe => {
             props.recipes.map(propRecipe => {
                 if(propRecipe.id == navigateRecipe.id && !propRecipe.dummy){

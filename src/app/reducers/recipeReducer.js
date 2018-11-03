@@ -44,16 +44,17 @@ function addCategory(oldState, action){
 
 
 function updateRecipe(oldState, action){
-    return {
-        ...oldState,
-        recipes[oldState.recipes.indexOf(action.recipe)]: action.recipe
-    }
-    // state = state.updateIn(['recipes'], function (recipes) {
-    //     console.log("i update!")
-    //     recipes.splice(recipes.indexOf(action.recipe), 1, action.recipe)
-    //     let n = recipes
-    //     return n
-    // })   
+    let state = oldState
+    state = state.updateIn(['recipes'], function (recipes) {
+        recipes = recipes.splice(recipes.indexOf(recipes.filter(recipe => recipe.id == action.recipe.id).get(0)), 1, action.recipe)
+        //console.log({indexedRecipe: recipes.get(recipes.indexOf(recipes.filter(recipe => recipe.id == action.recipe.id).get(0))) })
+        let n = recipes
+        return n
+    })  
+    //console.log({updatedState: state.get('recipes').filter(recipe => recipe.id == action.recipe.id).get(0), 
+        //actionRecipe: action.recipe})
+
+    return state
 
 }
 
