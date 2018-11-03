@@ -47,7 +47,6 @@ class App extends PureComponent  {
                         <Route path="/handlekurv" component={ShopList} />
                         <Route path="/kjoleskap" component={Fridge} />
                         <Route path="/:recipe" render={()=> {
-                            console.log({AppProp: this.props})
                             let match = this.props.recipes.filter(recipe => 
                             {
                                 if(this.props.location.pathname === "/" + recipe.title){
@@ -55,7 +54,6 @@ class App extends PureComponent  {
                                 }
                             })
                             if( match.size > 0){
-                                console.log({match: match, props: this.props})
                                 return <RecipePage recipe={match.get(0)} /> 
                             } else { return <NotFound /> }
 

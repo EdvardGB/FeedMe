@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // Material UI 
-import Autosuggest from 'react-autosuggest';
 import Paper from '@material-ui/core/Paper';
 import deburr from 'lodash/deburr';
-
+import Input from '@material-ui/core/Input';
 
 export default class SearchComponent extends Component {
     
@@ -23,6 +22,7 @@ export default class SearchComponent extends Component {
             if (this.state.suggestionBase.length == 0){
                 this.props.search(value)
                 .then(response =>{
+                    
                     response.json().then(data => {
                         data = this.props.handleData(data) 
                         this.setState({
@@ -38,20 +38,18 @@ export default class SearchComponent extends Component {
     };
 
     getSuggestions(value){
-        // return suggestion based upon most equal to value in suggestionBase. Return only 5 suggestions
-        const inputValue = deburr(value.trim()).toLowerCase();
+        // return suggestion based upon most equal to value in suggestionBase. 
+        const inputValue = value.toLowerCase();
         const inputLength = inputValue.length;
         let count = 0;
-        let maxCount = 6;
+        let maxCount = 10; // TODO: make into a user changeable value
         return inputLength === 0
             ? this.state.suggestions
             : new Promise((resolve, reject) => {
-                this.getSuggestionBase(value).then(suggestionBase => {
+                this.getSuggestionBase(inputValue).then(suggestionBase => {
                     let sugestions = suggestionBase.filter(suggestion => {
-                        const filter = this.props.filter
-                        const keep =
-                            // TODO. Implement search match on all words in string, not just the first
-                            count < maxCount && suggestion[filter].slice(0, inputLength).toLowerCase() === inputValue;
+                        const keep = 
+                            count < maxCount && suggestion['title'].toLowerCase().includes(inputValue);
                         if (keep) {
                             count += 1;
                         }
@@ -61,9 +59,6 @@ export default class SearchComponent extends Component {
                         sugestions: sugestions
                     })
                     resolve(sugestions)
-                    
-                   resolve([])
-                    
                 })
             });
 
@@ -83,16 +78,15 @@ export default class SearchComponent extends Component {
         })
     }
 
-    onSuggestionsFetchRequested({ value }){
+    onSuggestionsFetchRequested(value){
         this.getSuggestions(value)
         .then(suggestions => {
             this.props.onFetch(suggestions)
-            suggestions.push({[this.props.filter]: "Add new...", id: "new"})
             this.setState({
                 suggestions: suggestions
             })
-
         })
+        
     };
 
     onSuggestionsClearRequested(){
@@ -103,21 +97,13 @@ export default class SearchComponent extends Component {
         this.props.clear()
     };
 
-    renderSuggestion(suggestion) {
-        if(this.props.render){
-            return this.props.render(suggestion[this.props.filter])
+    onChange(event){
+        let value = event.target.value
+        if(value != ""){
+            this.onSuggestionsFetchRequested(value)
+        } else {
+            this.onSuggestionsClearRequested()
         }
-        return <Paper square>
-            {suggestion[this.props.filter]}
-        </Paper>
-    }
-
-    selectSugestion(suggestion){
-        this.setState({
-            selected: suggestion
-        })
-        this.props.select(suggestion)
-        return ""
     }
 
     render() {
@@ -128,13 +114,8 @@ export default class SearchComponent extends Component {
             onChange: this.onChange.bind(this)
           };
         return (
-            <Autosuggest
-                suggestions={suggestions}
-                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested.bind(this)}
-                onSuggestionsClearRequested={this.onSuggestionsClearRequested.bind(this)}
-                getSuggestionValue={this.selectSugestion.bind(this)}
-                renderSuggestion={this.renderSuggestion.bind(this)}
-                inputProps={inputProps}
+            <Input
+                onChange={this.onChange.bind(this)}
             />
         )
     }

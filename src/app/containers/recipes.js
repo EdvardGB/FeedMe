@@ -22,6 +22,7 @@ import * as recipeActions from '../actions/recipeAction';
 import * as shopListActions from '../actions/shopListActions';
 
 import Recipe from '../interfaces/recipe';
+import { List } from '@material-ui/core';
 
 
 class Recipes extends PureComponent  {
@@ -39,24 +40,37 @@ class Recipes extends PureComponent  {
         }
     }
 
-    componentWillReceiveProps(props){
-        const { renderRecipes, navigateRecipe } = this.state
-        console.log({recipesProps: props, navigateREcipe: this.state})
-        renderRecipes.map(recipe => {
-            props.recipes.map(propRecipe => {
-                if(propRecipe.id == navigateRecipe.id && !propRecipe.dummy){
-                    console.log({newProp: propRecipe})
-                    history.push('/' + propRecipe.url)
-                }
+    componentDidMount(){
+        this.clearSearch()
+    }
 
-                else if(recipe.id == propRecipe.id && recipe.dummy && !propRecipe.dummy){
-                    renderRecipes.splice(renderRecipes.indexOf(recipe), 1, propRecipe)
-                    this.setState({
-                        renderRecipes: renderRecipes
-                    })
-                }
+
+    componentWillReceiveProps(props){
+        console.log("new props")
+        let navigating = false
+        const { renderRecipes, navigateRecipe } = this.state
+        if(renderRecipes.length > 0 || renderRecipes.size > 0){
+            renderRecipes.map(recipe => {
+                props.recipes.map(propRecipe => {
+                    if(propRecipe.id == navigateRecipe.id && !propRecipe.dummy && !navigating){
+                        history.push('/' + propRecipe.url)
+                        navigating = true
+                    }
+    
+                    else if(recipe.id == propRecipe.id && recipe.dummy && !propRecipe.dummy){
+                        renderRecipes.splice(renderRecipes.indexOf(recipe), 1, propRecipe)
+                        this.setState({
+                            renderRecipes: renderRecipes
+                        })
+                    } 
+                })
             })
-        })
+        } else {
+            console.log(renderRecipes)
+            this.setState({
+                renderRecipes: props.recipes
+            })
+        }
     }
     
 
@@ -81,7 +95,7 @@ class Recipes extends PureComponent  {
     }
 
     handleData(data){
-        this.props.addRecipes(data.results, this.props.recipes)
+        this.props.addRecipes(data.results, this.props.recipes) // TODO: update or add new
         return data.results
     }
 
@@ -93,19 +107,25 @@ class Recipes extends PureComponent  {
         }
     }
 
-    searchRender(suggestion){
-        return <div>{suggestion}</div>
-    }
 
     clearSearch(){
-        
+        this.setState({
+            renderRecipes: this.props.recipes
+        })
     }
 
     onSuggestionsFetch(suggestions){
+        const {recipes} = this.props
         this.setState({
-            renderRecipes: suggestions.map(suggestion => new Recipe(suggestion))
+            renderRecipes: suggestions.map(suggestion => {
+                let k = recipes.filter(recipe => recipe.id == suggestion.id)
+                if (k.size > 0) {
+                    return k.get(0)
+                } else {
+                    return new Recipe(suggestion)
+                }
+            })
         })
-
     }
 
     navigate(recipe){
@@ -116,6 +136,7 @@ class Recipes extends PureComponent  {
 
 
     render () {
+        console.log(this.state.navigateRecipe)
         return (
             <div>
                 <h1>Oppskrifter</h1>
@@ -125,8 +146,6 @@ class Recipes extends PureComponent  {
                         select={this.recipeSearchSelect.bind(this)}
                         search={API.recipetAPISearch}
                         handleData={this.handleData.bind(this)}
-                        filter={'title'}
-                        render={this.searchRender.bind(this)}
                         clear={this.clearSearch.bind(this)}
                         onFetch={this.onSuggestionsFetch.bind(this)}
                     />

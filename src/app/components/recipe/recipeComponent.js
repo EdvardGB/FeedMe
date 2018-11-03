@@ -98,12 +98,12 @@ export default class RecipeComponent extends React.PureComponent {
 
     navigate(){
         const { recipe } = this.props
-        // if(recipe.dummy){
+        if(recipe.dummy){
             this.props.navigate(recipe)
             this.props.update(recipe)
-        // } else {
-            //history.push('/' + recipe.url)
-        //}
+        } else {
+            history.push('/' + recipe.url)
+        }
     }
     
     render() {

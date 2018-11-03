@@ -47,12 +47,9 @@ function updateRecipe(oldState, action){
     let state = oldState
     state = state.updateIn(['recipes'], function (recipes) {
         recipes = recipes.splice(recipes.indexOf(recipes.filter(recipe => recipe.id == action.recipe.id).get(0)), 1, action.recipe)
-        //console.log({indexedRecipe: recipes.get(recipes.indexOf(recipes.filter(recipe => recipe.id == action.recipe.id).get(0))) })
         let n = recipes
         return n
     })  
-    //console.log({updatedState: state.get('recipes').filter(recipe => recipe.id == action.recipe.id).get(0), 
-        //actionRecipe: action.recipe})
 
     return state
 

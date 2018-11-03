@@ -33,15 +33,6 @@ class RecipePage extends PureComponent  {
             allChecked: recipe ? recipe.ingredients.filter(ingredient => !ingredient.inShoppingList).length == 0 : false,
         }
     }
-    componentDidMount(){
-        console.log({mount: this.props})
-    }
-    componentDidUpdate(prevProps, prevState){
-        console.log({update: this.props})
-    }
-    componentWillReceiveProps(props){
-        console.log(props)
-    }
 
     ingredientChange(){
         this.setState({
