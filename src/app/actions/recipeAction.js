@@ -1,11 +1,13 @@
 import * as APIService from '../services/apiService';
 import Recipe from '../interfaces/recipe'; 
+import history from '../../history';
 
 export const actions = {
     addRecipe: "ADD_RECIPE",
     addCategory: "ADD_CATEGORY",
     addRecipes: "ADD_RECIPIES",
-    addRecipeDummies: "ADD_RECIPE_DUMMIES"
+    addRecipeDummies: "ADD_RECIPE_DUMMIES",
+    updateRecipe: "UPDATE_RECIPE",
 }
 
 
@@ -28,6 +30,13 @@ function addCategoryAction(arg){
     return {
         type: actions.addCategory,
         categorie: arg
+    }
+}
+
+function updateRecipeAction(arg){
+    return {
+        type: actions.updateRecipe,
+        recipe: arg
     }
 }
 
@@ -70,15 +79,23 @@ export function getCategory(dispatch, arg, resByCat){
     //dispatch(addRecipeDummiesAction(arg))
 }
 
-export function getRecipe(dispatch, id){
-    APIService.getAPIRecipe(id).then(response => 
-        response.json().then(data => { 
-            console.log(data)
-        })
+export function getRecipe(id){
+    return new Promise((resolve,reject) => {
+        APIService.getAPIRecipe(id).then(response => 
+            response.json().then(data => { 
+                resolve(new Recipe(data))
+            })
+        )
+    })
+}
+
+
+export function updateRecipe(dispatch, arg){
+    getRecipe(arg.id)
+    .then(recipe => 
+        dispatch(updateRecipeAction(recipe))
     )
 }
-    
-
 
 export function addCategory(dispatch, arg){
     dispatch(addCategoryAction(arg))
@@ -88,6 +105,12 @@ export function addRecipe(dispatch, arg){
     dispatch(addRecipeAction(arg))
 }
 
-export function addRecipes(dispatch, arg, categorie){
-    dispatch(addRecipesAction(arg, categorie))
+export function addRecipes(dispatch, recipes, oldRecipes){
+    recipes = recipes.filter(newRecipe => 
+        oldRecipes.filter(oldRecipe => 
+            newRecipe.id == oldRecipe.id
+        ).size == 0 
+    )
+
+    dispatch(addRecipesAction(recipes.map(recipe => new Recipe(recipe))))
 }

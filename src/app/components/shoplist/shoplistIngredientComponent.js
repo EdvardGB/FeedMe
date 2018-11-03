@@ -18,7 +18,7 @@ export default class IngredientComponent extends React.PureComponent {
             refresh: this.props.refresh,
             picked: this.props.ingredient.picked
         }
-        console.log(this.state.picked)
+
     }
 
     componentWillReceiveProps(props){

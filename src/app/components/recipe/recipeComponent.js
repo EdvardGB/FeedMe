@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { NavLink } from 'react-router-dom';
 import { Route, Redirect } from 'react-router'
+import history from '../../../history';
 
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -22,10 +23,10 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 import ImportContacts from '@material-ui/icons/ImportContacts'
 
-
 import IngredientComponent from './recipeIngredientComponent';
 
 import '../../styles/main.less';
+
   
 
 export default class RecipeComponent extends React.PureComponent { 
@@ -94,6 +95,16 @@ export default class RecipeComponent extends React.PureComponent {
     handleExpandClick(){
       this.setState({ expanded: !this.state.expanded });
     };
+
+    navigate(){
+        const { recipe } = this.props
+        // if(recipe.dummy){
+            this.props.navigate(recipe)
+            this.props.update(recipe)
+        // } else {
+            //history.push('/' + recipe.url)
+        //}
+    }
     
     render() {
         const { 
@@ -115,17 +126,13 @@ export default class RecipeComponent extends React.PureComponent {
                                 >
                                     <ExpandMoreIcon />
                                 </IconButton>
-                                <NavLink
-                                    to={recipe.url}
-                                >
                                     <IconButton
-                                        onClick={this.handleExpandClick.bind(this)}
+                                        onClick={this.navigate.bind(this)}
                                         aria-expanded={this.state.expanded}
                                         aria-label="Show more"
                                     >
                                         <ImportContacts />
-                                    </IconButton>
-                                </NavLink>
+                                </IconButton>
                             </div>
                             }
                             title={recipe.title}

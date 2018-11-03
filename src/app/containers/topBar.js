@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
 
+import history from '../../history';
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -25,18 +27,12 @@ class TopBar extends Component {
                         <Typography variant="title" color="inherit" >
                             Feed Me
                         </Typography>
-                        <NavLink to='/tilbud' className="TopBarLink">
-                            <Button color="inherit">Tilbud</Button>
-                        </NavLink>
-                        <NavLink to='/' className="TopBarLink">
-                            <Button color="inherit">Oppskrifter</Button>
-                        </NavLink>
-                        <NavLink to='/handlekurv' className="TopBarLink">
-                            <Button color="inherit">Handlekurv</Button>
-                        </NavLink>
-                        <NavLink to='/kjoleskap' className="TopBarLink">
-                            <Button color="inherit">Kjøleskap</Button>
-                        </NavLink>
+
+                        <Button color="inherit" onClick={() => history.push('/tilbud')}>Tilbud</Button>
+                        <Button color="inherit" onClick={() => history.push('/')}>Oppskrifter</Button>
+                        <Button color="inherit" onClick={() => history.push('/handlekurv')}>Handlekurv</Button>
+                        <Button color="inherit" onClick={() => history.push('/kjoleskap')}>Kjøleskap</Button>
+
                     </Toolbar>
                 </AppBar>
                 </div>

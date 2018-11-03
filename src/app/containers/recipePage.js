@@ -27,16 +27,26 @@ class RecipePage extends PureComponent  {
 
     constructor(props) {
         super(props); 
+        const { recipe } = this.props
         this.state = {
-            allChecked: this.props.recipe.ingredients.filter(ingredient => !ingredient.inShoppingList).length == 0
+            render: false,
+            allChecked: recipe ? recipe.ingredients.filter(ingredient => !ingredient.inShoppingList).length == 0 : false,
         }
+    }
+    componentDidMount(){
+        console.log({mount: this.props})
+    }
+    componentDidUpdate(prevProps, prevState){
+        console.log({update: this.props})
+    }
+    componentWillReceiveProps(props){
+        console.log(props)
     }
 
     ingredientChange(){
         this.setState({
             allChecked: this.props.recipe.ingredients.filter(ingredient => !ingredient.inShoppingList).length == 0
         })
-        console.log(this.props.recipe.ingredients.filter(ingredient => !ingredient.inShoppingList))
     }
 
     selectAll(event){
@@ -59,73 +69,75 @@ class RecipePage extends PureComponent  {
 
     }
 
+
     render () {
         const { 
             recipe
         } = this.props;
+        console.log({props: this.props})
         return (
-            
-            <div>
-                <h1>{this.props.recipe.title}</h1>
+            <div> hello 
+            {/*
+            <h1>{recipe.title}</h1>
                 <Card className="recipe">
-                        <CardMedia
-                                className="recipe-media"
-                                image={recipe.image}
-                            />
-                        <CardHeader
-                            title={recipe.title}
-        
-                        />   
-                            <CardContent>
-                                <Typography>
-                                    difficulty: {recipe.difficulty}
-                                </Typography>
-                                <Typography>
-                                    cookingDuration: {recipe.cookingDuration}
-                                </Typography>
-                                {renderHTML(this.props.recipe.instruction)}
-                                <Table>
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>Ingredienser</TableCell>
-                                            <TableCell>mengde</TableCell>
-                                            <TableCell>I kjøleskapet</TableCell>
-                                            <TableCell>Legg til handleliste</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        <TableRow className="IngredientRecipeListComponent">
-                                            <TableCell>
-                                            </TableCell>
-                                            <TableCell>
-                                            </TableCell>
-                                            <TableCell>
-                                                
-                                            </TableCell>
-                                            <TableCell>
-                                                <Checkbox
-                                                    checked={this.state.allChecked}
-                                                    onClick={this.selectAll.bind(this)}  
-                                                />
-                                            </TableCell>
-                                        </TableRow>
-                                        {this.props.recipe.ingredients.map(ingredient => 
-                                            <IngredientComponent 
-                                                key={ingredient.id} 
-                                                ingredient={ingredient} 
-                                                add={this.props.addIngToShopList}
-                                                remove={this.props.removeIngToShopList}
-                                                change={this.ingredientChange.bind(this)}
-                                            />
+                    <CardMedia
+                            className="recipe-media"
+                            image={recipe.image}
+                        />
+                    <CardHeader
+                        title={recipe.title}
+    
+                    />   
+                    <CardContent>
+                        <Typography>
+                            difficulty: {recipe.difficulty}
+                        </Typography>
+                        <Typography>
+                            cookingDuration: {recipe.cookingDuration}
+                        </Typography>
+                        {renderHTML(this.props.recipe.instruction)}
+                        <Table>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>Ingredienser</TableCell>
+                                    <TableCell>mengde</TableCell>
+                                    <TableCell>I kjøleskapet</TableCell>
+                                    <TableCell>Legg til handleliste</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                <TableRow className="IngredientRecipeListComponent">
+                                    <TableCell>
+                                    </TableCell>
+                                    <TableCell>
+                                    </TableCell>
+                                    <TableCell>
                                         
-                                        )}
-                                    </TableBody>
-                                </Table>
-                            </CardContent>
+                                    </TableCell>
+                                    <TableCell>
+                                        <Checkbox
+                                            checked={this.state.allChecked}
+                                            onClick={this.selectAll.bind(this)}  
+                                        />
+                                    </TableCell>
+                                </TableRow>
+                                {recipe.ingredients.map(ingredient => 
+                                    <IngredientComponent 
+                                        key={ingredient.id} 
+                                        ingredient={ingredient} 
+                                        add={this.props.addIngToShopList}
+                                        remove={this.props.removeIngToShopList}
+                                        change={this.ingredientChange.bind(this)}
+                                    />
+                                
+                                )}
+                            </TableBody>
+                        </Table>
+                    </CardContent>
 
-                    </Card>
-
+                </Card>*/}
             </div>
+
         )
     }
 }

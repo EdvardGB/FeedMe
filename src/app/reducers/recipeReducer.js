@@ -5,7 +5,7 @@ import * as recipeActions from '../actions/recipeAction';
 const initialState = fromJS({
     recipes: [],
     categories: [],
-    recipesByCategory: {},
+    recipesByCategory: {}
 });
 
 function addRecipes(oldState, action){
@@ -13,12 +13,6 @@ function addRecipes(oldState, action){
     state = state.updateIn(['recipes'], function (recipes) {
         action.data.forEach(recipe => {
             recipes = recipes.push(recipe)
-        })
-        return recipes
-    })
-    state = state.updateIn(['recipesByCategory'], function (categories) {
-        action.data.forEach(recipe => {
-            categories[action.categorie] = categories[action.categorie].push(recipe)
         })
         return recipes
     })
@@ -49,6 +43,20 @@ function addCategory(oldState, action){
 }
 
 
+function updateRecipe(oldState, action){
+    return {
+        ...oldState,
+        recipes[oldState.recipes.indexOf(action.recipe)]: action.recipe
+    }
+    // state = state.updateIn(['recipes'], function (recipes) {
+    //     console.log("i update!")
+    //     recipes.splice(recipes.indexOf(action.recipe), 1, action.recipe)
+    //     let n = recipes
+    //     return n
+    // })   
+
+}
+
 
 
 export function recipeReducer(state = initialState, action) {
@@ -59,6 +67,8 @@ export function recipeReducer(state = initialState, action) {
             return addCategory(state, action)
         case recipeActions.actions.addRecipes: 
             return addRecipes(state, action)
+        case recipeActions.actions.updateRecipe: 
+            return updateRecipe(state, action)
       default:
         return state;
     }

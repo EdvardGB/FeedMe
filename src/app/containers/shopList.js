@@ -46,7 +46,6 @@ class ShopList extends PureComponent {
         this.setState({
             allChecked: this.props.ingredients.filter(ingredient => !ingredient.picked).size == 0
         })
-        console.log(this.props.ingredients.filter(ingredient => !ingredient.picked).size == 0)
     }
 
     addAllToFridge(checked){
@@ -111,7 +110,6 @@ class ShopList extends PureComponent {
     
 
     ingredienSearchSelect(suggestion){
-        console.log(suggestion)
         if(suggestion.id == "new"){
             console.log("creating new ingredient")
         } else {

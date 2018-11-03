@@ -27,12 +27,7 @@ class App extends PureComponent  {
     constructor(props) {
         super(props); 
     }
-    
-    testClick(){
-        APIService.getAPI('productcategories/').then(response => 
-            response.json().then(data => console.log(JSON.stringify(data,null,4)))
-        )
-    }
+
     
     componentDidMount(){
         sampleData.recipes.map(recipe => this.props.addRecipe(
@@ -45,7 +40,6 @@ class App extends PureComponent  {
     render () {
         return (
             <div>
-                <button onClick={this.testClick.bind(this)}>hei</button>
                 <div className="App">
                     <TopBar />
                     <Switch>    
@@ -53,13 +47,16 @@ class App extends PureComponent  {
                         <Route path="/handlekurv" component={ShopList} />
                         <Route path="/kjoleskap" component={Fridge} />
                         <Route path="/:recipe" render={()=> {
-                            let match = this.props.recipes.filter(recipe => {
+                            console.log({AppProp: this.props})
+                            let match = this.props.recipes.filter(recipe => 
+                            {
                                 if(this.props.location.pathname === "/" + recipe.title){
                                     return  recipe
                                 }
                             })
                             if( match.size > 0){
-                                return match ? <RecipePage recipe={match.get(0)} /> : <NotFound /> 
+                                console.log({match: match, props: this.props})
+                                return <RecipePage recipe={match.get(0)} /> 
                             } else { return <NotFound /> }
 
 
