@@ -8,6 +8,16 @@ Sample application. Only the minimal is implemented!
 - No error handling
 - No universal token for API
 
+This project has CORS errors. It is not researched enough and shortcuts has been made. Running browser with **disabled web secuiry**. Not to be recomended, but it works.
+
+windows:
+run the cmd in "run" tool
+```
+ C:\Users\ USERNAME \AppData\Local\Google\Chrome\Application\chrome.exe --disable-web-security --user-data-dir="c:/chromedev"
+```
+IOS & Lunix:
+Unknown. 
+
 ## Project description
 
 This project is based on the [Kolonial API](https://github.com/kolonialno/api-docs)
