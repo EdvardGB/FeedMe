@@ -30,8 +30,9 @@ class App extends PureComponent  {
 
     
     componentDidMount(){
+        const { fridge } = this.props
         sampleData.recipes.map(recipe => this.props.addRecipe(
-            new Recipe(recipe)))
+            new Recipe(recipe, fridge)))
         sampleData.RecipeCategories.map(category => this.props.addCategory(
             new Category(category)
         ))
@@ -69,13 +70,15 @@ class App extends PureComponent  {
 
 
 App.propTypes  = {
-    recipes: PropTypes.object
+    recipes: PropTypes.object,
+    fridge: PropTypes.object
 }
 
 function mapStateToProps(state) {
-    //console.log(state.get('shopList'))
+
     return {
-      recipes: state.get('recipes').get('recipes')
+      recipes: state.get('recipes').get('recipes'),
+      fridge: state.get('fridge')
 
     };
 }

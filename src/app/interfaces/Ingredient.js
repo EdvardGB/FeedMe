@@ -17,7 +17,12 @@ export default class Ingredient {
         this.inFridge = false;
         this.inShoppingList = false;
         this.picked = false;
+        this.recipes = []
         
+    }
+
+    addRecipe(recipe){
+        this.recipes.push(recipe)
     }
 
     scale(value){

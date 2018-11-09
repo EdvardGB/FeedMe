@@ -1,6 +1,8 @@
 import { fromJS } from 'immutable';
 
 import * as recipeActions from '../actions/recipeAction'; 
+import * as fridgeActions from '../actions/fridgeActions'; 
+
 
 const initialState = fromJS({
     recipes: [],
@@ -55,6 +57,36 @@ function updateRecipe(oldState, action){
 
 }
 
+function addToBest(oldState, action){
+    let state = oldState
+    state = state.updateIn(['recipesByCategory'], function (categories) {
+        let best = categories["Beste oppskrifter for deg"]
+        action.recipes.map(recipe => {
+            if(!best.includes(recipe)){
+                best.push(recipe)
+            } else {
+                best = best.splice(best.indexOf(best.filter(bestRecipe => bestRecipe.id == recipe.id)[0]), 1, recipe)
+            }
+        })
+        categories["Beste oppskrifter for deg"] = best
+        return categories
+    })
+    return state
+}
+
+
+function addRecipesToCategory(oldState, action){
+    let state = oldState
+    state = state.updateIn(['recipesByCategory'], function (categories) {
+        let cat = categories[action.category]
+        action.recipes.map(recipe => {
+            cat.push(recipe)
+        })
+        categories[action.categorie] = cat
+        return categories
+    })
+    return state
+}
 
 
 export function recipeReducer(state = initialState, action) {
@@ -67,6 +99,10 @@ export function recipeReducer(state = initialState, action) {
             return addRecipes(state, action)
         case recipeActions.actions.updateRecipe: 
             return updateRecipe(state, action)
+        case fridgeActions.actions.addToBest:
+            return addToBest(state, action)
+        case recipeActions.actions.addRecipesToCategory:
+            return addRecipesToCategory(state, action)
       default:
         return state;
     }

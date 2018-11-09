@@ -32,11 +32,11 @@ class Recipes extends PureComponent  {
         this.state = {
             value: "",
             selectedCategory: {
-                id: 1,
-                title: "Få ingredienser"},
-            selectedValue: 1,
+                id: 1000,
+                title: "Beste oppskrifter for deg"},
+            selectedValue: 1000,
             renderRecipes: [],
-            navigateRecipe: {id: ''}
+            navigateRecipe: null
         }
     }
 
@@ -44,33 +44,36 @@ class Recipes extends PureComponent  {
         this.clearSearch()
     }
 
+    sleep(ms){
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
-    componentWillReceiveProps(props){
-        console.log("new props")
-        let navigating = false
-        const { renderRecipes, navigateRecipe } = this.state
-        if(renderRecipes.length > 0 || renderRecipes.size > 0){
-            renderRecipes.map(recipe => {
-                props.recipes.map(propRecipe => {
-                    if(propRecipe.id == navigateRecipe.id && !propRecipe.dummy && !navigating){
-                        history.push('/' + propRecipe.url)
-                        navigating = true
-                    }
     
-                    else if(recipe.id == propRecipe.id && recipe.dummy && !propRecipe.dummy){
-                        renderRecipes.splice(renderRecipes.indexOf(recipe), 1, propRecipe)
-                        this.setState({
-                            renderRecipes: renderRecipes
-                        })
-                    } 
+    componentWillReceiveProps(props){
+        let navigating = false
+        const { renderRecipes, navigateRecipe, selectedCategory } = this.state
+        if(selectedCategory.id != 1000){
+            
+            this.sleep(20).then(() => {
+                this.setState({
+                    // unknown reason why it only renders after a HO function called and must be async
+                    renderRecipes: props.recipesByCategory[selectedCategory.title].map(r=>r) 
                 })
             })
         } else {
-            console.log(renderRecipes)
             this.setState({
-                renderRecipes: props.recipes
+                renderRecipes: props.recipesByCategory["Beste oppskrifter for deg"]
             })
         }
+        if(navigateRecipe){
+            props.recipes.map(propRecipe => {
+                if(propRecipe.id == navigateRecipe.id && !propRecipe.dummy && !navigating){
+                    history.push('/' + propRecipe.url)
+                    navigating = true
+                }
+
+            })
+        } 
     }
     
 
@@ -85,13 +88,15 @@ class Recipes extends PureComponent  {
     }
 
     handleCategoryChange(event){
+        const { recipesByCategory, fridge, recipes } = this.props
         let selectedCategory = this.props.categories.filter(c => c.id == event.target.value).get(0)
         
+        this.props.getCategory(selectedCategory, recipesByCategory, recipes, fridge)
         this.setState({
             selectedCategory: selectedCategory, 
-            selectedValue: selectedCategory.id
+            selectedValue: selectedCategory.id,
+            renderRecipes: recipesByCategory[selectedCategory.title]
         })  //this.props.categories.filter(category => category.id === event.target.value).get(0)})
-        this.props.getCategory(selectedCategory, this.props.recipesByCategory)
     }
 
     handleData(data){
@@ -103,14 +108,14 @@ class Recipes extends PureComponent  {
         if(suggestion.id == "new"){
             console.log("creating new ingredient")
         } else {
-            this.props.updateRecipe(suggestion)
+            this.props.updateRecipe(suggestion, this.props.fridge)
         }
     }
 
 
     clearSearch(){
         this.setState({
-            renderRecipes: this.props.recipes
+            renderRecipes: this.props.recipesByCategory[this.state.selectedCategory.title]
         })
     }
 
@@ -121,9 +126,7 @@ class Recipes extends PureComponent  {
                 let k = recipes.filter(recipe => recipe.id == suggestion.id)
                 if (k.size > 0) {
                     return k.get(0)
-                } else {
-                    return new Recipe(suggestion)
-                }
+                } 
             })
         })
     }
@@ -136,7 +139,6 @@ class Recipes extends PureComponent  {
 
 
     render () {
-        console.log(this.state.navigateRecipe)
         return (
             <div>
                 <h1>Oppskrifter</h1>
@@ -169,7 +171,7 @@ class Recipes extends PureComponent  {
                         addIngredient = {this.props.addIngToShopList}
                         removeIngredient = {this.props.removeIngToShopList}
                         fridge={this.props.fridge}
-                        update={this.props.updateRecipe}
+                        update={(arg) => this.props.updateRecipe(arg, this.props.fridge)}
                         navigate={this.navigate.bind(this)}
                 />)}
             </div>
@@ -197,11 +199,11 @@ function mapDispatchToProps(dispatch) {
     return {
         addIngToShopList: (arg) => {shopListActions.add(dispatch, arg)},
         removeIngToShopList: (arg) => {shopListActions.remove(dispatch, arg)},
-        getCategory: (arg, res) => {recipeActions.getCategory(dispatch, arg, res)},
+        getCategory: (arg, res, ingredients) => {recipeActions.getCategory(dispatch, arg, res, ingredients)},
         addRecipe: (arg) => {recipeActions.addRecipe(dispatch, arg)},
-        getRecipe: (arg) => {recipeActions.getRecipe(dispatch, arg)},
+        getRecipe: (arg, ingredients) => {recipeActions.getRecipe(dispatch, arg, ingredients)},
         addRecipes: (arg, old) => {recipeActions.addRecipes(dispatch, arg, old)},
-        updateRecipe: (arg) => {recipeActions.updateRecipe(dispatch, arg)}
+        updateRecipe: (arg, ingredients) => {recipeActions.updateRecipe(dispatch, arg, ingredients)}
         //addRecipeDummies: (arg) => {recipeActions.addRecipeDummies(dispatch,arg)}
         
     };
